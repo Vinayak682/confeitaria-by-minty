@@ -20,7 +20,7 @@ export default function SignatureMenu() {
   const [activeTab, setActiveTab] = useState("Event Cakes");
 
   return (
-    <section className="signature-menu-section section-padding">
+    <section className="signature-menu-section section-padding" id="menu">
       <div className="container">
         <header className="text-center animate-fade-up">
           <span className="script-text vibrant-script">Bespoke Offerings</span>

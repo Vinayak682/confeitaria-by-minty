@@ -16,13 +16,13 @@ export default function RecipeCategories() {
 
         <div className="bento-grid">
           {categoriesPanel.map((cat, idx) => (
-            <Link to="/recipes" key={idx} className={`bento-item bento-item-${idx + 1} hover-card`}>
+            <div key={idx} className={`bento-item bento-item-${idx + 1} hover-card`}>
               <img src={cat.image} alt={cat.title} loading="lazy" />
               <div className="bento-overlay">
                 <h3>{cat.title}</h3>
-                <p>{cat.count} Recipes</p>
+                <p>{cat.count} Flavors</p>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
