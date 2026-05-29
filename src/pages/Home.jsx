@@ -7,7 +7,6 @@ import ReelGallery from '../components/ReelGallery';
 import Collaborations from '../components/Collaborations';
 import Testimonials from '../components/Testimonials';
 import Newsletter from '../components/Newsletter';
-import SignatureMenu from '../components/SignatureMenu';
 
 export default function Home() {
   return (
@@ -16,7 +15,6 @@ export default function Home() {
       <AboutChef />
       <HighlightsMenu />
       <RecipeCategories />
-      <SignatureMenu />
       <FlavorPalette />
       <ReelGallery />
       <Testimonials />

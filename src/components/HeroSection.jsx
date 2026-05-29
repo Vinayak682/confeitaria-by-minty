@@ -59,7 +59,7 @@ export default function HeroSection() {
             <h1>{headline}</h1>
             <p className="subtitle">{subheadline}</p>
             <div className="hero-actions">
-              <a href="#menu" className="btn btn-primary">Explore Signature Menu</a>
+              <a href="/portfolio" className="btn btn-primary">View My Portfolio</a>
               <a href="#reels" className="btn btn-outline">View Culinary Gallery</a>
             </div>
           </div>
