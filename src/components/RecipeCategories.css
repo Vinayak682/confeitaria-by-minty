@@ -97,9 +97,29 @@
 
 @media (max-width: 600px) {
   .bento-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin: 0 -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    -webkit-overflow-scrolling: touch;
   }
+  
+  .bento-grid::-webkit-scrollbar {
+    display: none;
+  }
+  
   .bento-item {
-    grid-column: span 1 !important;
+    flex: 0 0 85%;
+    height: 300px;
+    scroll-snap-align: center;
+  }
+  
+  .bento-item-1, .bento-item-2, .bento-item-3, .bento-item-4, .bento-item-5 {
+    grid-column: auto !important;
+    grid-row: auto !important;
   }
 }

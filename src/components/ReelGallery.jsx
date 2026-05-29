@@ -83,12 +83,18 @@ function ReelCard({ reel, isFeatured, index }) {
 export default function ReelGallery() {
   const { reels } = content;
   const [activeFilter, setActiveFilter] = useState('All');
+  const [visibleCount, setVisibleCount] = useState(8);
   
   const categories = ['All', 'Celebrations', 'Flavors', 'Masterclass', 'Behind the Scenes'];
 
   const filteredReels = activeFilter === 'All' 
     ? reels 
     : reels.filter(reel => reel.category === activeFilter);
+
+  const handleFilterChange = (cat) => {
+    setActiveFilter(cat);
+    setVisibleCount(8);
+  };
 
   return (
     <section className="reels-section section-padding" id="reels">
@@ -105,7 +111,7 @@ export default function ReelGallery() {
             <button 
               key={category}
               className={`filter-btn ${activeFilter === category ? 'active' : ''}`}
-              onClick={() => setActiveFilter(category)}
+              onClick={() => handleFilterChange(category)}
             >
               {category}
             </button>
@@ -113,7 +119,7 @@ export default function ReelGallery() {
         </div>
 
         <div className="editorial-reels-grid" key={activeFilter}>
-          {filteredReels.map((reel, index) => (
+          {filteredReels.slice(0, visibleCount).map((reel, index) => (
             <ReelCard 
               key={reel.id} 
               reel={reel} 
@@ -123,11 +129,22 @@ export default function ReelGallery() {
           ))}
         </div>
         
-        <div className="text-center" style={{ marginTop: '4rem' }}>
-          <a href="https://instagram.com/confeitaria_by_minty" target="_blank" rel="noreferrer" className="btn btn-primary">
-            View All on Instagram
-          </a>
-        </div>
+        {filteredReels.length > visibleCount ? (
+          <div className="text-center" style={{ marginTop: '3rem' }}>
+            <button 
+              className="btn btn-primary" 
+              onClick={() => setVisibleCount(prev => prev + 8)}
+            >
+              Load More Reels
+            </button>
+          </div>
+        ) : (
+          <div className="text-center" style={{ marginTop: '3rem' }}>
+            <a href="https://instagram.com/confeitaria_by_minty" target="_blank" rel="noreferrer" className="btn btn-outline">
+              View All on Instagram
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );
