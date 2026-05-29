@@ -1,5 +1,5 @@
 import './Portfolio.css';
-import { Download, Award, ChevronRight } from 'lucide-react';
+import { Award, ChevronRight } from 'lucide-react';
 
 export default function Portfolio() {
   const skills = [
@@ -26,11 +26,6 @@ export default function Portfolio() {
               <h2>Culinary Philosophy</h2>
               <p>I believe that true pastry art is the perfect balance between scientific precision and creative intuition. Every dessert should tell a story through its textures, flavor profiles, and visual presentation.</p>
               <p>My approach is rooted in classical French techniques, elevated by modern aesthetics and local, seasonal ingredients. Whether developing a menu for a boutique cafe or crafting a bespoke wedding cake, my goal is always to deliver an unforgettable sensory experience.</p>
-              
-              <a href="#" className="btn btn-primary resume-btn" onClick={(e) => { e.preventDefault(); alert("In a live app, this would download your PDF Resume!"); }}>
-                <Download size={18} />
-                Download Full Resume
-              </a>
             </div>
             <div className="philosophy-image hover-card">
               <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=1000" alt="Chef working" />
