@@ -16,6 +16,10 @@ function App() {
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="recipes" element={<RecipeList />} />
           <Route path="recipes/:id" element={<RecipeDetail />} />
+          {/* Catch-all: bare hashes like #reels resolve to "/reels" with no
+              matching route. Render Home so the page never goes blank — Layout
+              then scrolls to the matching section id if one exists. */}
+          <Route path="*" element={<Home />} />
         </Route>
       </Routes>
     </HashRouter>
