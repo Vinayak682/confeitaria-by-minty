@@ -100,7 +100,7 @@ export default function ReelGallery() {
     <section className="reels-section section-padding" id="reels">
       <div className="container">
         <header className="text-center animate-fade-up">
-          <span className="script-text vibrant-script">@confeitaria_by_minty</span>
+          <span className="script-text vibrant-script animated-handle">@confeitaria_by_minty</span>
           <h2>The Culinary Gallery</h2>
           <div className="divider mx-auto"></div>
           <p className="subtitle" style={{marginBottom: '2rem'}}>Explore my latest techniques, behind-the-scenes, and final masterpieces.</p>

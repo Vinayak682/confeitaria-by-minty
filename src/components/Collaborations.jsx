@@ -12,9 +12,6 @@ export default function Collaborations() {
             <p className="collab-desc">
               Looking for a professional pastry chef to elevate your brand? I partner with premium food brands, kitchen equipment companies, and publications for recipe development, sponsored content, and media inquiries.
             </p>
-            <p className="collab-contact">
-              <strong>Email:</strong> hello@confeitariabyminty.com
-            </p>
           </div>
           
           <div className="collab-form-wrap">

@@ -221,3 +221,28 @@
     grid-row: span 1;
   }
 }
+
+.animated-handle {
+  display: inline-block;
+  background: linear-gradient(
+    to right,
+    var(--color-primary) 20%,
+    var(--color-accent) 40%,
+    #ff9a9e 60%,
+    var(--color-primary) 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: elegantShine 3s linear infinite;
+  font-size: 2.5rem; /* Slightly larger to stand out */
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 2px 4px rgba(220, 185, 185, 0.4));
+}
+
+@keyframes elegantShine {
+  to {
+    background-position: 200% center;
+  }
+}

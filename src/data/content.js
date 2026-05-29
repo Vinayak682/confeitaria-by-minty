@@ -22,12 +22,12 @@ export const content = {
     { title: "Crepes & Pancakes", count: 15, image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&q=80&w=800" }
   ],
   highlights: [
-    { title: "Breads", image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=400", url: "https://www.instagram.com/p/CbNO3Nsrkig/" },
-    { title: "Cookies", image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&q=80&w=400", url: "https://www.instagram.com/p/CbKrHs5rkb3/" },
-    { title: "Cupcakes", image: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=400", url: "https://www.instagram.com/p/CbFtlyWjRF-/" },
-    { title: "Ganache", image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&q=80&w=400", url: "https://www.instagram.com/p/CbpnEd3J6xx/" },
-    { title: "Cheesecake", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=400", url: "https://www.instagram.com/reel/Cb-mEnKFcaT/" },
-    { title: "Gift Boxes", image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=400", url: "https://www.instagram.com/p/Cc-wkkztRme/" }
+    { title: "Ganache", image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&q=80&w=400", url: "https://www.instagram.com/stories/highlights/17870237648716017/" },
+    { title: "Cookies", image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&q=80&w=400", url: "https://www.instagram.com/stories/highlights/17892186299583653/" },
+    { title: "Cupcakes", image: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=400", url: "https://www.instagram.com/stories/highlights/17963885065835910/" },
+    { title: "Custom Gifts", image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=400", url: "https://instagram.com/confeitaria_by_minty" },
+    { title: "Cheesecake", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=400", url: "https://www.instagram.com/stories/highlights/17978624317617920/" },
+    { title: "Reviews", image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=400", url: "https://www.instagram.com/stories/highlights/17989205623495270/" }
   ],
   featuredCreations: [
     { id: 'macarons', title: 'Macarons', category: 'Showcase', image: 'https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&q=80&w=800' },
