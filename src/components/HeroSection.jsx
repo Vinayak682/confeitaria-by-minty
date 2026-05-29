@@ -1,4 +1,5 @@
 import { content } from '../data/content';
+import { Link } from 'react-router-dom';
 import './HeroSection.css';
 
 export default function HeroSection() {
@@ -59,7 +60,7 @@ export default function HeroSection() {
             <h1>{headline}</h1>
             <p className="subtitle">{subheadline}</p>
             <div className="hero-actions">
-              <a href="/portfolio" className="btn btn-primary">View My Portfolio</a>
+              <Link to="/portfolio" className="btn btn-primary">View My Portfolio</Link>
               <a href="#reels" className="btn btn-outline">View Culinary Gallery</a>
             </div>
           </div>
