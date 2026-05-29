@@ -58,6 +58,50 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* Credentials & Certifications */}
+        <section className="credentials-section section-padding">
+          <div className="text-center mb-5">
+            <h2 className="mb-4">Credentials & Certifications</h2>
+            <div className="divider mx-auto"></div>
+            <p className="subtitle" style={{marginTop: '1rem'}}>Formal training and international qualifications.</p>
+          </div>
+          
+          <div className="credentials-grid">
+            <div className="credential-card hover-card animate-fade-up">
+              <div className="credential-image">
+                <img src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&q=80&w=800" alt="SEP Diploma in Baking & Pastry" />
+              </div>
+              <div className="credential-info">
+                <h3>SEP Diploma in Baking & Pastry</h3>
+                <p>School for European Pastry</p>
+                <span className="cert-date">February 2022</span>
+              </div>
+            </div>
+
+            <div className="credential-card hover-card animate-fade-up" style={{animationDelay: '0.1s'}}>
+              <div className="credential-image">
+                <img src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&q=80&w=800" alt="Level 3 Diploma in Professional Patisserie" />
+              </div>
+              <div className="credential-info">
+                <h3>Level 3 Diploma in Professional Patisserie</h3>
+                <p>City & Guilds, London</p>
+                <span className="cert-date">Advanced Confectionery</span>
+              </div>
+            </div>
+
+            <div className="credential-card hover-card animate-fade-up" style={{animationDelay: '0.2s'}}>
+              <div className="credential-image">
+                <img src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&q=80&w=800" alt="SEP Certificate of Appreciation" />
+              </div>
+              <div className="credential-info">
+                <h3>Certificate of Appreciation</h3>
+                <p>School for European Pastry</p>
+                <span className="cert-date">Special Event Contribution</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Featured Case Study */}
         <section className="case-study-section animate-fade-up">
           <div className="case-study-card">
