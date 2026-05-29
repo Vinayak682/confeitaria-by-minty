@@ -15,12 +15,32 @@ export default function Services() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real app, this would send an email or save to a database.
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', service: 'custom-cake', date: '', details: '' });
-    }, 5000);
+    fetch("https://formsubmit.co/ajax/mintybhadani@gmail.com", {
+      method: "POST",
+      headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        Name: formData.name,
+        Email: formData.email,
+        Service: formData.service,
+        Date: formData.date,
+        Details: formData.details
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: '', email: '', service: 'custom-cake', date: '', details: '' });
+      }, 5000);
+    })
+    .catch(error => {
+      console.log(error);
+      alert("Something went wrong. Please try emailing directly.");
+    });
   };
 
   const services = [
@@ -78,7 +98,7 @@ export default function Services() {
               <p>Ready to collaborate? Fill out the form to discuss your event, consulting needs, or class availability. I aim to respond to all inquiries within 48 hours.</p>
               <div className="contact-direct">
                 <Mail size={20} />
-                <span>hello@confeitariabyminty.com</span>
+                <span>mintybhadani@gmail.com</span>
               </div>
             </div>
 

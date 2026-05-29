@@ -37,7 +37,7 @@ export default function Footer() {
                   <circle cx="4" cy="4" r="2"></circle>
                 </svg> LinkedIn
               </a>
-              <a href="mailto:hello@confeitariabyminty.com" className="social-link">
+              <a href="mailto:mintybhadani@gmail.com" className="social-link">
                 <Mail size={16} /> Email
               </a>
             </div>

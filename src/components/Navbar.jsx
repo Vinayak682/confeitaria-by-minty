@@ -24,7 +24,7 @@ export default function Navbar() {
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
             </svg>
           </a>
-          <a href="mailto:hello@confeitariabyminty.com" aria-label="Email">
+          <a href="mailto:mintybhadani@gmail.com" aria-label="Email">
             <Mail size={20} />
           </a>
         </div>
