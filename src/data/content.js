@@ -15,10 +15,10 @@ export const content = {
     image: "/confeitaria-by-minty/minty-profile.jpg"
   },
   categoriesPanel: [
-    { title: "Gourmet Donuts", count: 12, image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=800" },
+    { title: "Gourmet Donuts", count: 12, image: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=800" },
     { title: "Cupcakes", count: 24, image: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=800" },
     { title: "Sugar Cookies", count: 18, image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&q=80&w=800" },
-    { title: "Savory & Salads", count: 8, image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800" },
+    { title: "Artisan Tarts", count: 8, image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=800" },
     { title: "Crepes & Pancakes", count: 15, image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&q=80&w=800" }
   ],
   highlights: [
@@ -33,7 +33,7 @@ export const content = {
     { id: 'macarons', title: 'Macarons', category: 'Showcase', image: 'https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&q=80&w=800' },
     { id: 'cheesecakes', title: 'Cheesecakes', category: 'Showcase', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800', video: 'https://cdn.pixabay.com/video/2019/11/02/28643-370503070_large.mp4' },
     { id: 'brownies', title: 'Brownies', category: 'Showcase', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=800' },
-    { id: 'xmas', title: 'Seasonal Specials', category: 'Showcase', image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=800', video: 'https://cdn.pixabay.com/video/2021/08/17/85375-589926861_large.mp4' }
+    { id: 'xmas', title: 'Seasonal Specials', category: 'Showcase', image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=800', video: 'https://cdn.pixabay.com/video/2021/08/17/85375-589926861_large.mp4' }
   ],
   recipes: [
     {
@@ -77,7 +77,7 @@ export const content = {
       title: "Sprinkle Loaded Donuts",
       description: "Fluffy yeast donuts topped with chocolate glaze and rainbow sprinkles.",
       category: "Donuts",
-      image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=1200",
+      image: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=1200",
       prepTime: "120 mins",
       cookTime: "10 mins",
       ingredients: ["Flour", "Yeast", "Milk", "Butter", "Sugar", "Chocolate Glaze"],
@@ -101,8 +101,8 @@ export const content = {
     { id: 29, type: 'post', category: 'Celebrations', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/CbNO3Nsrkig/' },
     { id: 30, type: 'post', category: 'Flavors', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/CbKrHs5rkb3/' },
     { id: 31, type: 'post', category: 'Masterclass', image: 'https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/CbFtlyWjRF-/' },
-    { id: 32, type: 'post', category: 'Behind the Scenes', image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/CbpnEd3J6xx/' },
-    { id: 33, type: 'video', category: 'Celebrations', image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cb-mEnKFcaT/' },
+    { id: 32, type: 'post', category: 'Behind the Scenes', image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/CbpnEd3J6xx/' },
+    { id: 33, type: 'video', category: 'Celebrations', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cb-mEnKFcaT/' },
     { id: 34, type: 'post', category: 'Flavors', image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/Cc-wkkztRme/' },
     { id: 35, type: 'post', category: 'Masterclass', image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/Cd5koTsLNdQ/' },
     { id: 36, type: 'post', category: 'Behind the Scenes', image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/CfRg5A2tdEC/' },
@@ -111,7 +111,7 @@ export const content = {
     { id: 39, type: 'video', category: 'Masterclass', image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CjI1ubLJLP2/' },
     { id: 40, type: 'video', category: 'Behind the Scenes', image: 'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CjhRy4aD8pF/' },
     { id: 41, type: 'video', category: 'Celebrations', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cld_5EqNdlx/' },
-    { id: 1, type: 'video', category: 'Flavors', image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CoB-c8aPJta/' },
+    { id: 1, type: 'video', category: 'Flavors', image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CoB-c8aPJta/' },
     { id: 2, type: 'video', category: 'Masterclass', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CtYntpRthu_/' },
     { id: 3, type: 'video', category: 'Behind the Scenes', image: 'https://images.unsplash.com/photo-1621236378699-8597faf6a176?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/DY1Qq0cyPuH/' },
     { id: 4, type: 'video', category: 'Celebrations', image: 'https://images.unsplash.com/photo-1514516345957-556ca7d90a29?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/DYV4leey6_W/' },
@@ -127,8 +127,8 @@ export const content = {
     { id: 14, type: 'post', category: 'Masterclass', image: 'https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/Cr_d42Qom0I/' },
     { id: 15, type: 'video', category: 'Behind the Scenes', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CrEZUitv6ff/' },
     { id: 16, type: 'video', category: 'Celebrations', image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CrQ4BqQp1tm/' },
-    { id: 17, type: 'video', category: 'Flavors', image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CrAk-rYvjLV/' },
-    { id: 18, type: 'video', category: 'Masterclass', image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cq0YICMP-nb/' },
+    { id: 17, type: 'video', category: 'Flavors', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CrAk-rYvjLV/' },
+    { id: 18, type: 'video', category: 'Masterclass', image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cq0YICMP-nb/' },
     { id: 19, type: 'video', category: 'Behind the Scenes', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cqa65gDrg9h/' },
     { id: 20, type: 'video', category: 'Celebrations', image: 'https://images.unsplash.com/photo-1621236378699-8597faf6a176?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CqD2HZSPeTY/' },
     { id: 21, type: 'video', category: 'Flavors', image: 'https://images.unsplash.com/photo-1514516345957-556ca7d90a29?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cpk2OWSPRlM/' },
