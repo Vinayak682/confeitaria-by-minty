@@ -5,20 +5,34 @@ export default function FeaturedCreations() {
   const { featuredCreations } = content;
 
   return (
-    <section className="featured-section section-padding">
+    <section className="featured-section section-padding" id="creations">
       <div className="container">
-        <header className="text-center animate-fade-up">
-          <span className="script-text">Signature Pastries</span>
+        <div className="section-header text-center">
+          <span className="script-text vibrant-script">Signature Pastries</span>
           <h2>Featured Creations</h2>
-          <div className="divider mx-auto"></div>
-        </header>
+        </div>
 
-        <div className="grid-2 featured-grid">
-          {featuredCreations.map((item) => (
-            <div key={item.id} className="featured-card hover-card">
-              <img src={item.image} alt={item.title} loading="lazy" />
-              <div className="featured-overlay">
-                <h3>{item.title}</h3>
+        <div className="showcase-grid">
+          {featuredCreations.map((creation) => (
+            <div key={creation.id} className="showcase-card">
+              {creation.video ? (
+                <video 
+                  src={creation.video} 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline 
+                  className="showcase-video"
+                  poster={creation.image}
+                />
+              ) : (
+                <img src={creation.image} alt={creation.title} className="showcase-img" loading="lazy" />
+              )}
+              <div className="showcase-overlay">
+                <div className="showcase-info">
+                  <span className="category-tag">{creation.category}</span>
+                  <h3>{creation.title}</h3>
+                </div>
               </div>
             </div>
           ))}
