@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { content } from '../data/content';
 import './RecipeCategories.css';
 
