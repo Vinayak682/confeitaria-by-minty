@@ -2,12 +2,45 @@
   background-color: var(--color-background);
 }
 
+.gallery-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid rgba(220, 185, 185, 0.5);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  color: var(--color-text-main);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+  transform: translateY(-2px);
+}
+
 .editorial-reels-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 280px;
   gap: 1.5rem;
-  margin-top: 3rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .reel-card {

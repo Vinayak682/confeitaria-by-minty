@@ -82,6 +82,13 @@ function ReelCard({ reel, isFeatured, index }) {
 
 export default function ReelGallery() {
   const { reels } = content;
+  const [activeFilter, setActiveFilter] = useState('All');
+  
+  const categories = ['All', 'Celebrations', 'Flavors', 'Masterclass', 'Behind the Scenes'];
+
+  const filteredReels = activeFilter === 'All' 
+    ? reels 
+    : reels.filter(reel => reel.category === activeFilter);
 
   return (
     <section className="reels-section section-padding" id="reels">
@@ -90,11 +97,23 @@ export default function ReelGallery() {
           <span className="script-text vibrant-script">@confeitaria_by_minty</span>
           <h2>The Culinary Gallery</h2>
           <div className="divider mx-auto"></div>
-          <p className="subtitle" style={{marginBottom: '3rem'}}>Explore my latest techniques, behind-the-scenes, and final masterpieces.</p>
+          <p className="subtitle" style={{marginBottom: '2rem'}}>Explore my latest techniques, behind-the-scenes, and final masterpieces.</p>
         </header>
 
-        <div className="editorial-reels-grid">
-          {reels.map((reel, index) => (
+        <div className="gallery-filters animate-fade-up">
+          {categories.map(category => (
+            <button 
+              key={category}
+              className={`filter-btn ${activeFilter === category ? 'active' : ''}`}
+              onClick={() => setActiveFilter(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        <div className="editorial-reels-grid" key={activeFilter}>
+          {filteredReels.map((reel, index) => (
             <ReelCard 
               key={reel.id} 
               reel={reel} 
