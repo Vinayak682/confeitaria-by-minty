@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  /* Pastel & Elegant Minimalism Palette */
+  --color-primary: #FCE9E9; /* Soft blush pink */
+  --color-background: #FAFAF8; /* Warm cream / pearl white */
+  --color-surface: #FFFFFF; /* Pure white */
+  --color-accent: #B76E79; /* Rose gold / muted berry */
+  --color-nude: #F4EAE2; /* Light nude tone */
+  
+  --color-text-main: #333333; /* Muted charcoal */
+  --color-text-muted: #666666; /* Lighter charcoal */
+  
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-script: 'Dancing Script', cursive;
+  
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Delicate, soft shadows */
+  --shadow-sm: 0 4px 12px rgba(51, 51, 51, 0.03);
+  --shadow-md: 0 8px 24px rgba(51, 51, 51, 0.05);
+  --shadow-lg: 0 20px 40px rgba(51, 51, 51, 0.08);
+
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--color-text-main);
+  line-height: 1.2;
+}
+
+.script-text {
+  font-family: var(--font-script);
+  color: var(--color-accent);
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Elegant Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-text-main);
+  color: var(--color-surface);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--color-text-main);
+  color: var(--color-text-main);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-text-main);
+  color: var(--color-surface);
+}
+
+/* Utilities */
+.divider {
+  width: 40px;
+  height: 1px;
+  background-color: var(--color-accent);
+  margin: 1.5rem 0;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Layout utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Card hover effect (subtle) */
+.hover-card {
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}

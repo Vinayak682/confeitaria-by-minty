@@ -1,0 +1,90 @@
+.flavor-palette-section {
+  background-color: var(--color-surface);
+  border-top: 1px solid rgba(51, 51, 51, 0.05);
+}
+
+.palette-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.palette-swatch-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  transition: transform var(--transition-normal);
+}
+
+.palette-swatch-wrapper:hover {
+  transform: translateY(-10px);
+}
+
+.palette-swatch {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow var(--transition-normal);
+  overflow: hidden;
+  background-color: var(--color-background);
+}
+
+.palette-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.palette-swatch-wrapper:hover .palette-swatch {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.swatch-inner-ring {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.6); /* Changed to white so it's visible over images */
+  transition: transform var(--transition-slow);
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.palette-swatch-wrapper:hover .swatch-inner-ring {
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.palette-name {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--color-text-main);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .palette-swatch {
+    width: 90px;
+    height: 90px;
+  }
+  .swatch-inner-ring {
+    width: 65px;
+    height: 65px;
+  }
+  .palette-container {
+    gap: 2rem;
+  }
+}
