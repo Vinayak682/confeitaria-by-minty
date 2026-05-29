@@ -12,7 +12,7 @@ export const content = {
       "Diploma in Pastry and Baking",
       "City & Guilds Certified"
     ],
-    image: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&q=80&w=1000"
+    image: "/confeitaria-by-minty/minty-profile.jpg"
   },
   categoriesPanel: [
     { title: "Gourmet Donuts", count: 12, image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=800" },
