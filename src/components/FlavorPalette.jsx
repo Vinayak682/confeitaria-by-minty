@@ -1,4 +1,3 @@
-import { content } from '../data/content';
 import './FlavorPalette.css';
 
 export default function FlavorPalette() {
