@@ -33,7 +33,7 @@ export default function Portfolio() {
               </a>
             </div>
             <div className="philosophy-image hover-card">
-              <img src="https://images.unsplash.com/photo-1556206079-a1b72e987c2c?auto=format&fit=crop&q=80&w=1000" alt="Chef working" />
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=1000" alt="Chef working" />
             </div>
           </div>
         </section>
@@ -69,7 +69,7 @@ export default function Portfolio() {
           <div className="credentials-grid">
             <div className="credential-card hover-card animate-fade-up">
               <div className="credential-image">
-                <img src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&q=80&w=800" alt="SEP Diploma in Baking & Pastry" />
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800" alt="SEP Diploma in Baking & Pastry" />
               </div>
               <div className="credential-info">
                 <h3>SEP Diploma in Baking & Pastry</h3>
@@ -80,7 +80,7 @@ export default function Portfolio() {
 
             <div className="credential-card hover-card animate-fade-up" style={{animationDelay: '0.1s'}}>
               <div className="credential-image">
-                <img src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&q=80&w=800" alt="Level 3 Diploma in Professional Patisserie" />
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800" alt="Level 3 Diploma in Professional Patisserie" />
               </div>
               <div className="credential-info">
                 <h3>Level 3 Diploma in Professional Patisserie</h3>
@@ -91,7 +91,7 @@ export default function Portfolio() {
 
             <div className="credential-card hover-card animate-fade-up" style={{animationDelay: '0.2s'}}>
               <div className="credential-image">
-                <img src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&q=80&w=800" alt="SEP Certificate of Appreciation" />
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800" alt="SEP Certificate of Appreciation" />
               </div>
               <div className="credential-info">
                 <h3>Certificate of Appreciation</h3>
