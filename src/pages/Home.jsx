@@ -8,6 +8,7 @@ import RecipeCategories from '../components/RecipeCategories';
 import ReelGallery from '../components/ReelGallery';
 import Collaborations from '../components/Collaborations';
 import Testimonials from '../components/Testimonials';
+import Newsletter from '../components/Newsletter';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <ReelGallery />
       <Testimonials />
       <Collaborations />
+      <Newsletter />
     </>
   );
 }

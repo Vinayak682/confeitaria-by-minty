@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Mail } from 'lucide-react';
 import './Navbar.css';
 
@@ -11,9 +11,10 @@ export default function Navbar() {
           <span className="brand-sub">by Minty</span>
         </Link>
         <div className="nav-links">
-          <Link to="/" className="nav-link">Home</Link>
-          <Link to="/recipes" className="nav-link">Recipes</Link>
-          <a href="/#collaborations" className="nav-link">Collaborations</a>
+          <NavLink to="/" className={({isActive}) => isActive ? "active" : ""}>Home</NavLink>
+          <NavLink to="/services" className={({isActive}) => isActive ? "active" : ""}>Services</NavLink>
+          <NavLink to="/portfolio" className={({isActive}) => isActive ? "active" : ""}>Portfolio</NavLink>
+          <NavLink to="/recipes" className={({isActive}) => isActive ? "active" : ""}>Recipes</NavLink>
         </div>
         <div className="nav-socials">
           <a href="https://instagram.com/confeitaria_by_minty" target="_blank" rel="noreferrer" aria-label="Instagram">
