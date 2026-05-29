@@ -26,12 +26,12 @@ export const content = {
     { title: "Cookies", image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&q=80&w=400" },
     { title: "Cupcakes", image: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=400" },
     { title: "Ganache", image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&q=80&w=400" },
-    { title: "Cheesecake", image: "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=400" },
+    { title: "Cheesecake", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=400" },
     { title: "Gift Boxes", image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=400" }
   ],
   featuredCreations: [
     { id: 'macarons', title: 'Macarons', category: 'Showcase', image: 'https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&q=80&w=800' },
-    { id: 'cheesecakes', title: 'Cheesecakes', category: 'Showcase', image: 'https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=800', video: 'https://cdn.pixabay.com/video/2019/11/02/28643-370503070_large.mp4' },
+    { id: 'cheesecakes', title: 'Cheesecakes', category: 'Showcase', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800', video: 'https://cdn.pixabay.com/video/2019/11/02/28643-370503070_large.mp4' },
     { id: 'brownies', title: 'Brownies', category: 'Showcase', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=800' },
     { id: 'xmas', title: 'Seasonal Specials', category: 'Showcase', image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=800', video: 'https://cdn.pixabay.com/video/2021/08/17/85375-589926861_large.mp4' }
   ],
@@ -99,16 +99,16 @@ export const content = {
   ],
   reels: [
     { id: 1, type: 'video', image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CoB-c8aPJta/' },
-    { id: 2, type: 'video', image: 'https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CtYntpRthu_/' },
+    { id: 2, type: 'video', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CtYntpRthu_/' },
     { id: 3, type: 'video', image: 'https://images.unsplash.com/photo-1621236378699-8597faf6a176?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/DY1Qq0cyPuH/' },
     { id: 4, type: 'video', image: 'https://images.unsplash.com/photo-1514516345957-556ca7d90a29?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/DYV4leey6_W/' },
     { id: 5, type: 'video', image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/DWlBPJNEoYx/' },
-    { id: 6, type: 'post', image: 'https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/DC3pA45yNeA/' },
+    { id: 6, type: 'post', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/DC3pA45yNeA/' },
     { id: 7, type: 'video', image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/C_9oV9VSi8v/' },
     { id: 8, type: 'video', image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/C_fN_xxyefp/' },
     { id: 9, type: 'video', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/C4muVhqydtE/' },
     { id: 10, type: 'post', image: 'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/C39iWGDrxHR/' },
-    { id: 11, type: 'post', image: 'https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/C1_qgEGSC6d/' },
+    { id: 11, type: 'post', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/C1_qgEGSC6d/' },
     { id: 12, type: 'video', image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CwHz1WzIWj3/' },
     { id: 13, type: 'video', image: 'https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CtjfvBWIrqu/' },
     { id: 14, type: 'post', image: 'https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/Cr_d42Qom0I/' },
@@ -116,16 +116,16 @@ export const content = {
     { id: 16, type: 'video', image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CrQ4BqQp1tm/' },
     { id: 17, type: 'video', image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CrAk-rYvjLV/' },
     { id: 18, type: 'video', image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cq0YICMP-nb/' },
-    { id: 19, type: 'video', image: 'https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cqa65gDrg9h/' },
+    { id: 19, type: 'video', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cqa65gDrg9h/' },
     { id: 20, type: 'video', image: 'https://images.unsplash.com/photo-1621236378699-8597faf6a176?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CqD2HZSPeTY/' },
     { id: 21, type: 'video', image: 'https://images.unsplash.com/photo-1514516345957-556ca7d90a29?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cpk2OWSPRlM/' },
     { id: 22, type: 'video', image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CpPjPByLSlv/' },
-    { id: 23, type: 'post', image: 'https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/Co9URVcyU0G/' },
+    { id: 23, type: 'post', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/p/Co9URVcyU0G/' },
     { id: 24, type: 'video', image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cn32HQkjYz7/' },
     { id: 25, type: 'video', image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cm_zYtpjPlC/' },
     { id: 26, type: 'video', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/Cl-xN1-LDRS/' },
     { id: 27, type: 'video', image: 'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/CmB0YiIuDi0/' },
-    { id: 28, type: 'video', image: 'https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/ClTegBuv-3A/' }
+    { id: 28, type: 'video', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=400', url: 'https://www.instagram.com/reel/ClTegBuv-3A/' }
   ],
   testimonials: [
     {
