@@ -20,8 +20,7 @@
 .bts-video-wrapper {
   position: relative;
   width: 100%;
-  height: 80vh;
-  min-height: 600px;
+  height: 100vh;
   overflow: hidden;
   background-color: #000;
 }
@@ -93,9 +92,6 @@
 }
 
 @media (max-width: 768px) {
-  .bts-video-wrapper {
-    height: 60vh;
-  }
   .bts-title-script {
     font-size: 3.5rem;
   }
