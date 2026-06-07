@@ -23,37 +23,40 @@ export default function BehindTheScenes() {
 
   return (
     <section className="bts-section" id="behind-the-scenes">
-      <div className="bts-video-container background-blur">
-        {videos.map((src, index) => (
-          <video
-            key={`bg-${index}`}
-            src={src}
-            className={`bts-video-bg ${index === activeIndex ? 'active' : ''}`}
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
-        ))}
-      </div>
-      <div className="bts-video-container foreground">
-        {videos.map((src, index) => (
-          <video
-            key={`fg-${index}`}
-            src={src}
-            className={`bts-video-fg ${index === activeIndex ? 'active' : ''}`}
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
-        ))}
-      </div>
-      
-      <div className="bts-overlay">
-        <div className="bts-content animate-fade-up">
+      <div className="bts-header text-center section-padding" style={{paddingBottom: '2rem', paddingTop: '4rem', backgroundColor: 'var(--color-background)'}}>
+        <div className="container">
           <h2 className="bts-title-script">Behind the Scenes</h2>
         </div>
+      </div>
+      
+      <div className="bts-video-wrapper">
+        <div className="bts-video-container background-blur">
+          {videos.map((src, index) => (
+            <video
+              key={`bg-${index}`}
+              src={src}
+              className={`bts-video-bg ${index === activeIndex ? 'active' : ''}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          ))}
+        </div>
+        <div className="bts-video-container foreground">
+          {videos.map((src, index) => (
+            <video
+              key={`fg-${index}`}
+              src={src}
+              className={`bts-video-fg ${index === activeIndex ? 'active' : ''}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          ))}
+        </div>
+        <div className="bts-overlay"></div>
       </div>
     </section>
   );
