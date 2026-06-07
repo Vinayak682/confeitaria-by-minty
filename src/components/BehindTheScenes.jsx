@@ -23,12 +23,25 @@ export default function BehindTheScenes() {
 
   return (
     <section className="bts-section" id="behind-the-scenes">
-      <div className="bts-video-container">
+      <div className="bts-video-container background-blur">
         {videos.map((src, index) => (
           <video
-            key={index}
+            key={`bg-${index}`}
             src={src}
-            className={`bts-video ${index === activeIndex ? 'active' : ''}`}
+            className={`bts-video-bg ${index === activeIndex ? 'active' : ''}`}
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ))}
+      </div>
+      <div className="bts-video-container foreground">
+        {videos.map((src, index) => (
+          <video
+            key={`fg-${index}`}
+            src={src}
+            className={`bts-video-fg ${index === activeIndex ? 'active' : ''}`}
             autoPlay
             muted
             loop
