@@ -7,75 +7,46 @@
   justify-content: center;
   margin-top: -80px; /* pull up under navbar */
   overflow: hidden;
-  background-color: var(--color-background);
+  background-color: #000;
 }
 
-.hero-reels-backdrop {
+.hero-video-backdrop {
   position: absolute;
-  top: -20%;
-  left: -5%;
-  width: 110%;
-  height: 140%;
-  display: flex;
-  gap: 1.5rem;
-  z-index: 0;
-  opacity: 0.35; /* dim the background so text is readable */
-  transform: rotate(-8deg) scale(1.1); /* give it a dynamic editorial angle */
-  pointer-events: none; /* prevent interacting with background */
-}
-
-.backdrop-column {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 20%;
-}
-
-.backdrop-img {
+  top: 0;
+  left: 0;
   width: 100%;
-  border-radius: var(--radius-md);
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
   object-fit: cover;
-  aspect-ratio: 4/5;
-  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
 }
 
-.animate-up {
-  animation: scrollUp 40s linear infinite;
-}
-
-.animate-down {
-  animation: scrollDown 45s linear infinite;
-}
-
-.animate-up-slow {
-  animation: scrollUp 55s linear infinite;
-}
-
-.animate-down-slow {
-  animation: scrollDown 50s linear infinite;
-}
-
-@keyframes scrollUp {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-50%); }
-}
-
-@keyframes scrollDown {
-  0% { transform: translateY(-50%); }
-  100% { transform: translateY(0); }
+.hero-bg-video.visible {
+  opacity: 1;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* An elegant gradient overlay that matches the UI colors */
+  inset: 0;
+  /* An elegant, moody gradient overlay that makes colors pop and text readable */
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.8) 0%,
-    rgba(252, 233, 233, 0.4) 100%
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(20, 10, 15, 0.6) 100%
   );
   display: flex;
   align-items: center;
@@ -96,31 +67,36 @@
   padding: 4rem;
   text-align: center;
   max-width: 900px;
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: var(--radius-lg);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.hero-glass-card h1 {
+.premium-dark-card {
+  background: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.premium-dark-card h1 {
   font-size: clamp(3.5rem, 8vw, 6rem);
   margin-bottom: 1.5rem;
-  color: var(--color-text-main);
+  color: #ffffff;
   letter-spacing: -0.02em;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-.hero-glass-card .subtitle {
+.premium-dark-card .subtitle {
   font-size: clamp(1.1rem, 2vw, 1.25rem);
   margin-bottom: 3rem;
-  color: var(--color-text-main);
+  color: rgba(255, 255, 255, 0.9);
   font-family: var(--font-body);
   font-weight: 400;
   line-height: 1.8;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.5);
 }
 
 .hero-actions {
@@ -130,9 +106,19 @@
   flex-wrap: wrap;
 }
 
+.btn-outline.light-outline {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+}
+
+.btn-outline.light-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
 @media (max-width: 600px) {
   .hero-glass-card {
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.75);
   }
 }
