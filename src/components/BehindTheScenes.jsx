@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import './BehindTheScenes.css';
 
 const videos = [
-  '/videos/bts-1.mp4',
-  '/videos/bts-2.mp4',
-  '/videos/bts-3.mp4',
-  '/videos/bts-4.mp4',
-  '/videos/bts-5.mp4'
+  `${import.meta.env.BASE_URL}videos/bts-1.mp4`,
+  `${import.meta.env.BASE_URL}videos/bts-2.mp4`,
+  `${import.meta.env.BASE_URL}videos/bts-3.mp4`,
+  `${import.meta.env.BASE_URL}videos/bts-4.mp4`,
+  `${import.meta.env.BASE_URL}videos/bts-5.mp4`
 ];
 
 export default function BehindTheScenes() {
