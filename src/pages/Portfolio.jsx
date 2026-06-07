@@ -28,7 +28,7 @@ export default function Portfolio() {
               <p>My approach is rooted in classical French techniques, elevated by modern aesthetics and local, seasonal ingredients. Whether developing a menu for a boutique cafe or crafting a bespoke wedding cake, my goal is always to deliver an unforgettable sensory experience.</p>
             </div>
             <div className="philosophy-image hover-card">
-              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=1000" alt="Chef working" />
+              <img src="/confeitaria-by-minty/user-media/minty_photo_25.png" alt="Chef working" />
             </div>
           </div>
         </section>
@@ -64,7 +64,7 @@ export default function Portfolio() {
           <div className="credentials-grid">
             <div className="credential-card hover-card animate-fade-up">
               <div className="credential-image">
-                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800" alt="SEP Diploma in Baking & Pastry" />
+                <img src="/confeitaria-by-minty/user-media/minty_photo_26.png" alt="SEP Diploma in Baking & Pastry" />
               </div>
               <div className="credential-info">
                 <h3>SEP Diploma in Baking & Pastry</h3>
@@ -75,7 +75,7 @@ export default function Portfolio() {
 
             <div className="credential-card hover-card animate-fade-up" style={{animationDelay: '0.1s'}}>
               <div className="credential-image">
-                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800" alt="Level 3 Diploma in Professional Patisserie" />
+                <img src="/confeitaria-by-minty/user-media/minty_photo_27.png" alt="Level 3 Diploma in Professional Patisserie" />
               </div>
               <div className="credential-info">
                 <h3>Level 3 Diploma in Professional Patisserie</h3>
@@ -86,7 +86,7 @@ export default function Portfolio() {
 
             <div className="credential-card hover-card animate-fade-up" style={{animationDelay: '0.2s'}}>
               <div className="credential-image">
-                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800" alt="SEP Certificate of Appreciation" />
+                <img src="/confeitaria-by-minty/user-media/minty_photo_28.png" alt="SEP Certificate of Appreciation" />
               </div>
               <div className="credential-info">
                 <h3>Certificate of Appreciation</h3>
@@ -101,7 +101,7 @@ export default function Portfolio() {
         <section className="case-study-section animate-fade-up">
           <div className="case-study-card">
             <div className="case-study-image">
-              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=1200" alt="Case Study" />
+              <img src="/confeitaria-by-minty/user-media/minty_photo_29.png" alt="Case Study" />
             </div>
             <div className="case-study-content">
               <span className="category-tag">Case Study</span>

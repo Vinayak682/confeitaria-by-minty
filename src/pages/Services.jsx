@@ -48,19 +48,19 @@ export default function Services() {
       title: "Bespoke Event Cakes",
       price: "Starting at $150",
       description: "Custom-designed, multi-tiered cakes for weddings, anniversaries, and milestones. Featuring signature flavor pairings and exquisite sugar-paste artistry.",
-      image: "https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&q=80&w=800"
+      image: "/confeitaria-by-minty/user-media/minty_photo_30.png"
     },
     {
       title: "Cafe Menu Consulting",
       price: "Retainer or Project Based",
       description: "Comprehensive pastry menu development for cafes and restaurants. Includes recipe creation, staff training, and cost-efficiency analysis.",
-      image: "https://images.unsplash.com/photo-1556206079-a1b72e987c2c?auto=format&fit=crop&q=80&w=800"
+      image: "/confeitaria-by-minty/user-media/minty_photo_31.png"
     },
     {
       title: "Private Masterclasses",
       price: "Starting at $300/session",
       description: "1-on-1 or small group intensive pastry workshops. Master the art of macarons, laminated doughs, or advanced chocolate tempering.",
-      image: "https://images.unsplash.com/photo-1621236378699-8597faf6a176?auto=format&fit=crop&q=80&w=800"
+      image: "/confeitaria-by-minty/user-media/minty_photo_32.png"
     }
   ];
 

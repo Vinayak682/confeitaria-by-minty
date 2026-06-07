@@ -2,12 +2,12 @@ import './FlavorPalette.css';
 
 export default function FlavorPalette() {
   const categories = [
-    { name: "Cakes & Tarts", image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=400" },
-    { name: "Macarons", image: "https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&q=80&w=400" },
-    { name: "Fudges", image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=400" },
-    { name: "Breads", image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=400" },
-    { name: "Cupcakes", image: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=400" },
-    { name: "Savory", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400" }
+    { name: "Cakes & Tarts", image: "/confeitaria-by-minty/user-media/minty_photo_19.png" },
+    { name: "Macarons", image: "/confeitaria-by-minty/user-media/minty_photo_20.png" },
+    { name: "Fudges", image: "/confeitaria-by-minty/user-media/minty_photo_21.png" },
+    { name: "Breads", image: "/confeitaria-by-minty/user-media/minty_photo_22.png" },
+    { name: "Cupcakes", image: "/confeitaria-by-minty/user-media/minty_photo_23.png" },
+    { name: "Savory", image: "/confeitaria-by-minty/user-media/minty_photo_24.png" }
   ];
 
   return (
