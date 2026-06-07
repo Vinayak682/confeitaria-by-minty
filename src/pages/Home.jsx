@@ -1,4 +1,5 @@
 import HeroSection from '../components/HeroSection';
+import BehindTheScenes from '../components/BehindTheScenes';
 import AboutChef from '../components/AboutChef';
 import FlavorPalette from '../components/FlavorPalette';
 import HighlightsMenu from '../components/HighlightsMenu';
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <BehindTheScenes />
       <AboutChef />
       <HighlightsMenu />
       <RecipeCategories />
