@@ -28,25 +28,35 @@
   min-height: 100%;
   width: auto;
   height: auto;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.01);
   object-fit: cover;
   opacity: 0;
   transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: opacity;
+  will-change: opacity, transform;
+  /* Enhanced effects for maximum depth and resolution */
+  filter: contrast(1.15) saturate(1.25) brightness(1.05);
 }
 
 .hero-bg-video.visible {
   opacity: 1;
+  /* Ken Burns cinematic slow zoom effect for immense depth */
+  animation: cinematicZoom 10s ease-out forwards;
+}
+
+@keyframes cinematicZoom {
+  0% { transform: translate(-50%, -50%) scale(1.01); }
+  100% { transform: translate(-50%, -50%) scale(1.08); }
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  /* An elegant, moody gradient overlay that makes colors pop and text readable */
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(20, 10, 15, 0.6) 100%
+  /* An elegant, moody radial vignette overlay to draw the eye to the center and enhance depth */
+  background: radial-gradient(
+    circle at center,
+    rgba(10, 5, 8, 0.2) 0%,
+    rgba(10, 5, 8, 0.5) 60%,
+    rgba(5, 0, 5, 0.8) 100%
   );
   display: flex;
   align-items: center;

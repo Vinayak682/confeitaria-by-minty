@@ -4,10 +4,13 @@ import { useState, useEffect } from 'react';
 import './HeroSection.css';
 
 const bgVideos = [
+  "/confeitaria-by-minty/user-media/minty_full_vid_1.mp4",
   "/confeitaria-by-minty/user-media/minty_full_vid_2.mp4",
   "/confeitaria-by-minty/user-media/minty_full_vid_3.mp4",
+  "/confeitaria-by-minty/user-media/minty_full_vid_4.mp4",
   "/confeitaria-by-minty/user-media/minty_full_vid_5.mp4",
-  "/confeitaria-by-minty/user-media/minty_full_vid_6.mp4"
+  "/confeitaria-by-minty/user-media/minty_full_vid_6.mp4",
+  "/confeitaria-by-minty/user-media/minty_full_vid_7.mp4"
 ];
 
 export default function HeroSection() {
