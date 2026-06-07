@@ -52,10 +52,7 @@ export default function BehindTheScenes() {
       
       <div className="bts-overlay">
         <div className="bts-content animate-fade-up">
-          <span className="script-text vibrant-script">Exclusive Look</span>
           <h2>Behind the Scenes</h2>
-          <div className="divider mx-auto"></div>
-          <p className="subtitle">Witness the craftsmanship and passion poured into every masterpiece.</p>
         </div>
       </div>
     </section>
