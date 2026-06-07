@@ -3,7 +3,7 @@ export const content = {
     headline: "Elegant Bakes, Thoughtfully Crafted.",
     subheadline: "Minty Bhadani is a certified pastry chef sharing refined desserts, creative baking, and signature recipes.",
     image: "/confeitaria-by-minty/user-media/minty_photo_1.png",
-    videoBg: "/confeitaria-by-minty/user-media/minty_video_1.mp4"
+    videoBg: "/confeitaria-by-minty/user-media/minty_full_vid_3.mp4"
   },
   about: {
     bio: "Passionate about creating exquisite European pastries and delightful desserts. Based in beautiful Auckland, New Zealand.",
@@ -31,9 +31,9 @@ export const content = {
   ],
   featuredCreations: [
     { id: 'macarons', title: 'Macarons', category: 'Showcase', image: "/confeitaria-by-minty/user-media/minty_photo_14.png" },
-    { id: 'cheesecakes', title: 'Cheesecakes', category: 'Showcase', image: "/confeitaria-by-minty/user-media/minty_photo_15.png", video: "/confeitaria-by-minty/user-media/minty_video_1.mp4" },
+    { id: 'cheesecakes', title: 'Cheesecakes', category: 'Showcase', image: "/confeitaria-by-minty/user-media/minty_photo_15.png", video: "/confeitaria-by-minty/user-media/minty_full_vid_1.mp4" },
     { id: 'brownies', title: 'Brownies', category: 'Showcase', image: "/confeitaria-by-minty/user-media/minty_photo_16.png" },
-    { id: 'xmas', title: 'Seasonal Specials', category: 'Showcase', image: "/confeitaria-by-minty/user-media/minty_photo_17.png", video: "/confeitaria-by-minty/user-media/minty_video_2.mp4" }
+    { id: 'xmas', title: 'Seasonal Specials', category: 'Showcase', image: "/confeitaria-by-minty/user-media/minty_photo_17.png", video: "/confeitaria-by-minty/user-media/minty_full_vid_2.mp4" }
   ],
   recipes: [
     {
