@@ -66,18 +66,18 @@
 
 .bento-item-2 {
   grid-column: span 2;
-  grid-row: span 1;
+  grid-row: span 2;
 }
 
-.bento-item-3,
-.bento-item-4 {
-  grid-column: span 1;
-  grid-row: span 1;
+.bento-item-3 {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
+.bento-item-4,
 .bento-item-5 {
-  grid-column: span 4;
-  grid-row: span 1;
+  grid-column: span 1;
+  grid-row: span 2;
 }
 
 @media (max-width: 900px) {
@@ -86,12 +86,11 @@
   }
   .bento-item-1 {
     grid-column: span 2;
+    grid-row: span 2;
   }
   .bento-item-2, .bento-item-3, .bento-item-4, .bento-item-5 {
     grid-column: span 1;
-  }
-  .bento-item-5 {
-    grid-column: span 2;
+    grid-row: span 2;
   }
 }
 
