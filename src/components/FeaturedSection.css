@@ -4,34 +4,33 @@
   overflow: hidden;
 }
 
-/* CSS Columns for automatic Masonry layout */
+/* Changed from CSS columns to a uniform CSS Grid */
 .masonry-grid {
-  column-count: 4;
-  column-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   padding: 1rem 0;
 }
 
 @media (max-width: 1024px) {
   .masonry-grid {
-    column-count: 3;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .masonry-grid {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .masonry-grid {
-    column-count: 1;
+    grid-template-columns: 1fr;
   }
 }
 
 .masonry-item {
-  break-inside: avoid;
-  margin-bottom: 1.5rem;
   /* Initial hidden state for the scroll animation */
   opacity: 0;
   transform: translateY(60px) scale(0.95);
@@ -50,20 +49,29 @@
   overflow: hidden;
   box-shadow: 0 10px 30px -10px rgba(0,0,0,0.15);
   cursor: pointer;
+  /* Uniform aspect ratio for all images */
+  aspect-ratio: 4 / 5;
   /* Use isolation to keep the blur contained */
   isolation: isolate;
+  background-color: #000;
 }
 
 .masonry-image-wrapper img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
+  /* Zoom in to hide screenshot UI borders, and enhance quality */
+  transform: scale(1.1);
+  filter: contrast(1.1) saturate(1.15);
   /* Super smooth ultra-long transition for premium feel */
-  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-  will-change: transform;
+  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), filter 1.2s ease;
+  will-change: transform, filter;
 }
 
 .masonry-image-wrapper:hover img {
-  transform: scale(1.08);
+  transform: scale(1.2); /* Deeper zoom on hover */
+  filter: contrast(1.15) saturate(1.25) brightness(1.05); /* Enhanced quality on hover */
 }
 
 .masonry-overlay {
