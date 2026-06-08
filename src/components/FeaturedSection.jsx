@@ -45,11 +45,11 @@ export default function FeaturedSection() {
     <section className="featured-section section-padding">
       <div className="container">
         <header className="text-center animate-fade-up">
-          <span className="script-text vibrant-script animated-handle">Featured Creations</span>
-          <h2>The Minty Masterpieces</h2>
+          <span className="script-text vibrant-script animated-handle">Sweet Indulgences</span>
+          <h2>Melt-in-Your-Mouth Delights</h2>
           <div className="divider mx-auto"></div>
           <p className="subtitle" style={{marginBottom: '3rem'}}>
-            A curated collection of my most spectacular pastry creations.
+            A curated collection of irresistibly delicate, perfectly balanced pastry creations.
           </p>
         </header>
 
@@ -76,7 +76,7 @@ export default function FeaturedSection() {
         {visibleCount < featuredPhotos.length && (
           <div className="text-center animate-fade-up" style={{ marginTop: '4rem' }}>
             <button className="btn btn-primary" onClick={handleLoadMore}>
-              Load More Masterpieces
+              Load More Delights
             </button>
           </div>
         )}
