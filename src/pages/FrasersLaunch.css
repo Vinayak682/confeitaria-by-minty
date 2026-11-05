@@ -178,3 +178,10 @@
   .fr-intro { display: none; }
   .fr [data-reveal] { opacity: 1; transform: none; }
 }
+
+/* soft warm-yellow glare on script headings */
+.fr h2, .fr h3, .fr-arch figcaption, .fr-maison figcaption {
+  text-shadow: 0 0 3px rgba(255, 240, 180, 0.6), 0 0 16px rgba(255, 222, 130, 0.42), 0 0 34px rgba(255, 210, 110, 0.22);
+}
+.fr-quote .fr-shimmer { filter: drop-shadow(0 0 6px rgba(255, 226, 140, 0.8)) drop-shadow(0 0 22px rgba(255, 205, 100, 0.45)); }
+.fr-ribbon span { text-shadow: 0 0 10px rgba(255, 214, 120, 0.45); }
