@@ -46,7 +46,7 @@ export default function HeroSection() {
       <div className="hero-overlay">
         <div className="container hero-content animate-fade-up">
           <div className="hero-glass-card premium-dark-card">
-            <a href="#bhubaneswar" className="hero-soon-badge"><span className="hero-soon-dot" />Frasers · Bhubaneswar · Coming soon</a>
+            <a href="#bhubaneswar" className="hero-soon-badge"><span className="hero-soon-dot" />Frasers · Bhubaneswar</a>
             <h1>{headline}</h1>
             <p className="subtitle">{subheadline}</p>
             <div className="hero-actions">

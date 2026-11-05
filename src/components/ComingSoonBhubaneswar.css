@@ -102,7 +102,7 @@
 }
 
 /* the sign: gold letters with a warm backlit halo, lit up on entry */
-.csb-logo-wrap { position: relative; margin: 0.5rem 0 1.4rem; max-width: 640px; }
+.csb-logo-wrap { position: relative; margin: 1.6rem 0 1.8rem; max-width: 680px; }
 .csb-logo-wrap::before {
   content: '';
   position: absolute;
@@ -119,7 +119,7 @@
   display: block;
   opacity: 0.15;
   filter: drop-shadow(0 0 0 rgba(255, 170, 70, 0));
-  clip-path: inset(0 100% 0 0);
+  clip-path: inset(-30% 100% -30% -10%);
   transition:
     clip-path 2.4s cubic-bezier(0.65, 0, 0.35, 1) 0.2s,
     opacity 1.6s ease 0.2s,
@@ -128,7 +128,7 @@
 .csb--in .csb-logo-wrap::before { opacity: 1; animation: csbFlicker 6s ease-in-out 3s infinite; }
 .csb--in .csb-logo {
   opacity: 1;
-  clip-path: inset(0 0 0 0);
+  clip-path: inset(-30% -10% -30% -10%);
   filter:
     drop-shadow(0 0 6px rgba(255, 190, 100, 0.55))
     drop-shadow(0 0 22px rgba(255, 150, 50, 0.35));
@@ -200,7 +200,7 @@
 .csb--in .csb-chip { opacity: 1; transform: none; transition-delay: 0.1s; }
 .csb--in .csb-eyebrow { opacity: 1; transform: none; transition-delay: 0.25s; }
 .csb--in .csb-lede { opacity: 1; transform: none; transition-delay: 1.6s; }
-.csb--in .csb-actions { opacity: 1; transform: none; transition-delay: 1.9s; }
+.csb--in .csb-actions { opacity: 1; transform: none; transition-delay: 1.8s; }
 
 @media (max-width: 900px) {
   .csb { min-height: auto; padding: 5rem 0 4rem; }

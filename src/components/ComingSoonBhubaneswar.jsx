@@ -42,12 +42,8 @@ export default function ComingSoonBhubaneswar() {
       <div className="container csb-inner">
         <div className="csb-copy">
           <span className="csb-chip">
-            <span className="csb-dot" /> Now building · Opening soon
+            <span className="csb-dot" /> Opening soon · Bhubaneswar
           </span>
-
-          <h2 className="csb-eyebrow">
-            <MapPin size={16} strokeWidth={1.6} /> Bhubaneswar
-          </h2>
 
           <div className="csb-logo-wrap">
             <img
@@ -57,16 +53,10 @@ export default function ComingSoonBhubaneswar() {
             />
           </div>
 
-          <p className="csb-lede">
-            Something new is rising. A European patisserie, built crumb by crumb,
-            is almost ready to open its doors.
-          </p>
-
           <div className="csb-actions">
             <a href="#newsletter" className="btn btn-primary csb-btn">
-              <Sparkles size={16} strokeWidth={1.8} /> Be first through the door
+              <Sparkles size={16} strokeWidth={1.8} /> Notify me
             </a>
-            <span className="csb-note">Launch date announced soon</span>
           </div>
         </div>
 
@@ -80,7 +70,6 @@ export default function ComingSoonBhubaneswar() {
             loop
             playsInline
           />
-          <figcaption>A first look inside</figcaption>
         </figure>
       </div>
     </section>
