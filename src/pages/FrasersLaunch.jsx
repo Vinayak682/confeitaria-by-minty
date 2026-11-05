@@ -16,12 +16,41 @@ const ROOMS = [
   { src: 'still-11.jpg', word: 'Arches of light' },
   { src: 'still-13.5.jpg', word: 'Your seat' },
 ];
+const UM = '/confeitaria-by-minty/user-media';
 const RANGE = [
-  { name: 'Cakes', tone: 'sage' },
-  { name: 'Macarons', tone: 'blush' },
-  { name: 'Viennoiserie', tone: 'ivory' },
+  { name: 'Cakes', tone: 'sage', vid: 5 },
+  { name: 'Macarons', tone: 'blush', vid: 4 },
+  { name: 'Viennoiserie', tone: 'ivory', vid: 6 },
 ];
+const REELS = [
+  { vid: 1, url: 'https://www.instagram.com/reel/CoB-c8aPJta/' },
+  { vid: 7, url: 'https://www.instagram.com/reel/CtYntpRthu_/' },
+  { vid: 3, url: 'https://www.instagram.com/reel/DY1Qq0cyPuH/' },
+  { vid: 2, url: 'https://www.instagram.com/reel/DYV4leey6_W/' },
+  { vid: 5, url: 'https://www.instagram.com/reel/DWlBPJNEoYx/' },
+  { vid: 4, url: 'https://www.instagram.com/reel/C_9oV9VSi8v/' },
+  { vid: 6, url: 'https://www.instagram.com/reel/C_fN_xxyefp/' },
+];
+
+/* play videos only while on screen (saves data on phones) */
+function useLazyVideos() {
+  useEffect(() => {
+    const vids = document.querySelectorAll('.fr video[data-lazy]');
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      const v = e.target;
+      if (e.isIntersecting) {
+        if (!v.src) v.src = v.dataset.lazy;
+        v.play().catch(() => {});
+      } else v.pause();
+    }), { rootMargin: '200px 0px', threshold: 0.01 });
+    vids.forEach((v) => io.observe(v));
+    return () => io.disconnect();
+  }, []);
+}
 const MENU = ['Croissants', 'Éclairs', 'Macarons', 'Entremets', 'Tarts', 'Mille-feuille', 'Viennoiserie', 'Celebration cakes'];
+
+const isMobile = () => window.matchMedia('(max-width: 820px)').matches;
+const buzz = () => { try { navigator.vibrate && navigator.vibrate(8); } catch { /* unsupported */ } };
 
 const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
@@ -30,7 +59,11 @@ function useReveal() {
   useEffect(() => {
     const els = document.querySelectorAll('.fr [data-reveal]');
     const io = new IntersectionObserver(
-      (es) => es.forEach((e) => e.isIntersecting && e.target.classList.add('is-in')),
+      (es) => es.forEach((e) => {
+        if (!e.isIntersecting || e.target.classList.contains('is-in')) return;
+        e.target.classList.add('is-in');
+        if (e.target.classList.contains('fr-band') && isMobile()) buzz();
+      }),
       { threshold: 0.18 }
     );
     els.forEach((el) => io.observe(el));
@@ -46,6 +79,7 @@ function useHorizontal(wrapRef, trackRef) {
     let raf = 0;
     const update = () => {
       raf = 0;
+      if (isMobile()) { track.style.transform = ''; return; }
       const r = wrap.getBoundingClientRect();
       const total = wrap.offsetHeight - window.innerHeight;
       const p = Math.min(1, Math.max(0, -r.top / Math.max(1, total)));
@@ -72,13 +106,32 @@ export default function FrasersLaunch() {
   }, []);
   const wrapRef = useRef(null);
   const trackRef = useRef(null);
+  const [room, setRoom] = useState(0);
+  /* mobile: swipe carousel, the settled arch zooms out and writes its caption */
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-active');
+        setRoom(Number(e.target.dataset.k));
+      } else e.target.classList.remove('is-active');
+    }), { root: isMobile() ? track : null, threshold: 0.6 });
+    track.querySelectorAll('.fr-arch').forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+  const toRoom = (k) => {
+    const el = trackRef.current?.querySelectorAll('.fr-arch')[k];
+    el && trackRef.current.scrollTo({ left: el.offsetLeft - (trackRef.current.clientWidth - el.clientWidth) / 2, behavior: 'smooth' });
+  };
   useReveal();
+  useLazyVideos();
   useHorizontal(wrapRef, trackRef);
 
   useEffect(() => {
     document.title = 'Frasers · European Patisserie · Opening soon in Bhubaneswar';
     if (!intro) return;
-    const t = setTimeout(() => { setIntro(false); sessionStorage.setItem('fr-intro', '1'); }, 3400);
+    const t = setTimeout(() => { setIntro(false); sessionStorage.setItem('fr-intro', '1'); }, 2900);
     const esc = (e) => e.key === 'Escape' && setIntro(false);
     window.addEventListener('keydown', esc);
     return () => { clearTimeout(t); window.removeEventListener('keydown', esc); };
@@ -93,7 +146,14 @@ export default function FrasersLaunch() {
       h.style.setProperty('--mx', `${((e.clientX - r.left) / r.width) * 100}%`);
       h.style.setProperty('--my', `${((e.clientY - r.top) / r.height) * 100}%`);
     };
-    const scroll = () => h.style.setProperty('--sy', String(Math.min(1, window.scrollY / window.innerHeight)));
+    let last = window.scrollY, idle = 0;
+    const scroll = () => {
+      const y = window.scrollY;
+      h.style.setProperty('--sy', String(Math.min(1, y / window.innerHeight)));
+      h.style.setProperty('--vel', String(Math.max(-1, Math.min(1, (y - last) / 40))));
+      last = y; clearTimeout(idle);
+      idle = setTimeout(() => h.style.setProperty('--vel', '0'), 140);
+    };
     h.addEventListener('pointermove', move);
     window.addEventListener('scroll', scroll, { passive: true });
     return () => { h.removeEventListener('pointermove', move); window.removeEventListener('scroll', scroll); };
@@ -106,9 +166,20 @@ export default function FrasersLaunch() {
       {/* 0 · Doors open, sign lights up */}
       {intro && (
         <div className="fr-intro" onClick={() => setIntro(false)} role="presentation">
+          <div className="fr-load">
+            <div className="fr-flour" aria-hidden="true">
+              {Array.from({ length: 16 }).map((_, i) => <i key={i} style={{ '--i': i, left: `${(i * 41 + 9) % 100}%` }} />)}
+            </div>
+            <div className="fr-load-logo">
+              <img src={`${A}/logo-cocoa.png`} alt="" />
+              <span className="fr-nib" />
+            </div>
+            <div className="fr-whisk"><span /></div>
+            <small className="fr-load-note">Baking something new</small>
+          </div>
           <div className="fr-door fr-door--l"><span /></div>
           <div className="fr-door fr-door--r"><span /></div>
-          <img className="fr-intro-logo" src={`${A}/logo-gold.png`} alt="" />
+          <div className="fr-flash" />
           <button className="fr-skip" onClick={() => setIntro(false)}>Skip</button>
         </div>
       )}
@@ -162,19 +233,25 @@ export default function FrasersLaunch() {
           </div>
           <div className="fr-track" ref={trackRef}>
             {ROOMS.map((r, i) => (
-              <figure className="fr-arch" key={r.src} style={{ '--k': i }}>
+              <figure className="fr-arch" key={r.src} data-k={i} style={{ '--k': i }}>
                 <div className="fr-arch-img"><img src={`${A}/${r.src}`} alt={r.word} loading="lazy" /></div>
                 <figcaption><span>0{i + 1}</span>{r.word}</figcaption>
               </figure>
             ))}
           </div>
           <div className="fr-progress"><span /></div>
+          <div className="fr-dots" role="tablist" aria-label="Photos">
+            {ROOMS.map((r, i) => (
+              <button key={r.src} className={room === i ? 'on' : ''} onClick={() => toRoom(i)} aria-label={r.word} />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* 4 · Signature line */}
       <section className="fr-quote">
         <p data-reveal><span className="fr-shimmer">The art of the crumb</span><small>Frasers · European Patisserie</small></p>
+        <div className="fr-crumbs" aria-hidden="true">{Array.from({ length: 12 }).map((_, i) => <i key={i} style={{ '--i': i, left: `${20 + ((i * 47) % 60)}%` }} />)}</div>
       </section>
 
       {/* 5 · The range */}
@@ -186,6 +263,7 @@ export default function FrasersLaunch() {
         <div className="fr-range-grid">
           {RANGE.map((r, i) => (
             <div className={`fr-band fr-band--${r.tone}`} key={r.name} data-reveal style={{ '--d': `${i * 0.12}s` }}>
+              <video className="fr-band-vid" data-lazy={`${UM}/minty_full_vid_${r.vid}.mp4`} muted loop playsInline preload="none" aria-hidden="true" />
               <span className="fr-band-no">0{i + 1}</span>
               <h3>{r.name}</h3>
             </div>
@@ -197,13 +275,31 @@ export default function FrasersLaunch() {
         </figure>
       </section>
 
+      {/* 5b · Fresh from the kitchen: the Instagram reels */}
+      <section className="fr-reels" id="fr-reels">
+        <div className="fr-reels-head" data-reveal>
+          <h2>Fresh from the kitchen</h2>
+          <span className="fr-kicker">From our Instagram</span>
+        </div>
+        <div className="fr-reels-track">
+          {REELS.map((r, i) => (
+            <a className="fr-reel" key={i} href={r.url} target="_blank" rel="noreferrer" data-reveal style={{ '--d': `${(i % 4) * 0.08}s` }}>
+              <video data-lazy={`${UM}/minty_full_vid_${r.vid}.mp4`} muted loop playsInline preload="none" />
+              <span className="fr-reel-play" aria-hidden="true">▶</span>
+            </a>
+          ))}
+        </div>
+        <div className="fr-reels-cta"><a className="fr-btn fr-btn--ghost" href={IG} target="_blank" rel="noreferrer">Watch more on Instagram</a></div>
+      </section>
+
       {/* 6 · Final call */}
       <section className="fr-final">
         <div className="fr-final-card" data-reveal>
+          <div className="fr-shower" aria-hidden="true">{Array.from({ length: 18 }).map((_, i) => <i key={i} style={{ '--i': i, left: `${(i * 29 + 5) % 100}%` }} />)}</div>
           <span className="fr-pill fr-pill--dark"><span className="fr-dot" /> Opening soon · Bhubaneswar</span>
           <h2>Be first through the door</h2>
           <div className="fr-final-actions">
-            <a className="fr-btn fr-btn--cocoa" href={NOTIFY}><Mail size={16} strokeWidth={1.6} /> Notify me</a>
+            <a className="fr-btn fr-btn--cocoa fr-breathe" href={NOTIFY}><Mail size={16} strokeWidth={1.6} /> Notify me</a>
             <a className="fr-btn fr-btn--ghost" href={IG} target="_blank" rel="noreferrer"><Instagram size={16} strokeWidth={1.6} /> Follow along</a>
           </div>
         </div>
