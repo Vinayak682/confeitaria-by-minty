@@ -157,7 +157,7 @@ export default function FrasersLaunch() {
       <section className="fr-inside" id="fr-inside" ref={wrapRef}>
         <div className="fr-inside-sticky">
           <div className="fr-inside-head">
-            <h2>Step <i>inside</i></h2>
+            <h2>Step inside</h2>
             <span className="fr-kicker">A first look</span>
           </div>
           <div className="fr-track" ref={trackRef}>
@@ -174,14 +174,14 @@ export default function FrasersLaunch() {
 
       {/* 4 · Signature line */}
       <section className="fr-quote">
-        <p data-reveal><span className="fr-shimmer">The art of the crumb.</span></p>
+        <p data-reveal><span className="fr-shimmer">The art of the crumb</span><small>Frasers · European Patisserie</small></p>
       </section>
 
       {/* 5 · The range */}
       <section className="fr-range" id="fr-range">
         <div className="fr-range-head" data-reveal>
           <span className="fr-kicker">The range</span>
-          <h2>Three little <i>indulgences</i></h2>
+          <h2>Three little indulgences</h2>
         </div>
         <div className="fr-range-grid">
           {RANGE.map((r, i) => (
@@ -201,7 +201,7 @@ export default function FrasersLaunch() {
       <section className="fr-final">
         <div className="fr-final-card" data-reveal>
           <span className="fr-pill fr-pill--dark"><span className="fr-dot" /> Opening soon · Bhubaneswar</span>
-          <h2>Be first through <i>the door</i></h2>
+          <h2>Be first through the door</h2>
           <div className="fr-final-actions">
             <a className="fr-btn fr-btn--cocoa" href={NOTIFY}><Mail size={16} strokeWidth={1.6} /> Notify me</a>
             <a className="fr-btn fr-btn--ghost" href={IG} target="_blank" rel="noreferrer"><Instagram size={16} strokeWidth={1.6} /> Follow along</a>
