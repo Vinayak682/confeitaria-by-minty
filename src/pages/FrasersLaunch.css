@@ -309,3 +309,12 @@
   .fr-final-actions { flex-direction: column; align-items: center; gap: 0.8rem; }
   .fr-final-actions .fr-btn { width: min(100%, 240px); justify-content: center; padding: 0.95rem 1.2rem; font-size: 0.72rem; letter-spacing: 0.14em; }
 }
+
+/* keep script letters in their plain forms: no contextual swaps (the "or" join read as "oa") */
+.fr h1, .fr h2, .fr h3, .fr-arch figcaption, .fr-maison figcaption, .fr-ribbon span, .fr-quote p {
+  font-variant-ligatures: no-contextual;
+  font-feature-settings: "calt" 0;
+}
+/* set the final "r" on its own so the second "o" keeps its plain round shape */
+.fr-door-word { white-space: nowrap; }
+.fr-r { display: inline-block; margin-left: 0.02em; }

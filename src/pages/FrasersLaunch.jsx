@@ -297,7 +297,7 @@ export default function FrasersLaunch() {
         <div className="fr-final-card" data-reveal>
           <div className="fr-shower" aria-hidden="true">{Array.from({ length: 18 }).map((_, i) => <i key={i} style={{ '--i': i, left: `${(i * 29 + 5) % 100}%` }} />)}</div>
           <span className="fr-pill fr-pill--dark"><span className="fr-dot" /> Opening soon · Bhubaneswar</span>
-          <h2>Be first through the door</h2>
+          <h2>Be first through the <span className="fr-door-word">doo<span className="fr-r">r</span></span></h2>
           <div className="fr-final-actions">
             <a className="fr-btn fr-btn--cocoa fr-breathe" href={NOTIFY}><Mail size={16} strokeWidth={1.6} /> Notify me</a>
             <a className="fr-btn fr-btn--ghost" href={IG} target="_blank" rel="noreferrer"><Instagram size={16} strokeWidth={1.6} /> Follow along</a>
