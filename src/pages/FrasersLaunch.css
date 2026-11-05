@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&display=swap');
 
 .fr {
   --cocoa: #2b1912;
@@ -10,8 +10,8 @@
   --sage: #b9c7b0;
   --gold: #d6a75e;
   --gold-hi: #f6d79c;
-  --serif: 'Cormorant Garamond', 'Playfair Display', serif;
-  --sans: 'Jost', 'Inter', sans-serif;
+  --serif: 'Bodoni Moda', 'Didot', serif;
+  --sans: 'Bodoni Moda', 'Didot', serif;
   /* the store's lace floor tile, as a pattern */
   --lace: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%232b1912' stroke-width='1.1' opacity='.55'%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Ccircle cx='40' cy='40' r='6'/%3E%3Cpath d='M40 0q10 20 0 26q-10-6 0-26zM40 80q10-20 0-26q-10 6 0 26zM0 40q20 10 26 0q-6-10-26 0zM80 40q-20 10-26 0q6-10 26 0z'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3Ccircle cx='80' cy='0' r='10'/%3E%3Ccircle cx='0' cy='80' r='10'/%3E%3Ccircle cx='80' cy='80' r='10'/%3E%3C/g%3E%3C/svg%3E");
   /* the store's blush fluted wainscot */
@@ -21,7 +21,9 @@
   font-family: var(--sans);
   overflow-x: clip;
 }
-.fr h1, .fr h2, .fr h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01em; }
+.fr h1, .fr h2, .fr h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; font-optical-sizing: auto; }
+.fr h2 i, .fr h3 i { font-weight: 400; }
+.fr { font-optical-sizing: auto; }
 .fr h2 i, .fr h3 i { color: var(--blush-deep); }
 .fr-kicker { font-size: 0.72rem; letter-spacing: 0.4em; text-transform: uppercase; color: #9a7464; }
 
@@ -37,7 +39,7 @@
 .fr-door--l { left: 0; animation: frDoorL 1.5s cubic-bezier(0.77, 0, 0.18, 1) 0.5s forwards; }
 .fr-door--r { right: 0; animation: frDoorR 1.5s cubic-bezier(0.77, 0, 0.18, 1) 0.5s forwards; }
 .fr-intro-logo { width: min(70vw, 620px); opacity: 0; animation: frSignOn 1.6s ease 1.2s forwards; }
-.fr-skip { position: absolute; right: 24px; bottom: 24px; z-index: 3; background: none; border: 1px solid rgba(255, 255, 255, 0.4); color: #fff; padding: 0.5rem 1rem; font: 500 0.7rem var(--sans); letter-spacing: 0.3em; text-transform: uppercase; cursor: pointer; }
+.fr-skip { position: absolute; right: 24px; bottom: 24px; z-index: 3; background: none; border: 1px solid rgba(255, 255, 255, 0.4); color: #fff; padding: 0.5rem 1rem; font: 500 0.66rem var(--sans); letter-spacing: 0.3em; text-transform: uppercase; cursor: pointer; }
 @keyframes frDoorL { to { transform: translateX(-102%); } }
 @keyframes frDoorR { to { transform: translateX(102%); } }
 @keyframes frSignOn {
@@ -51,7 +53,7 @@
 .fr-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 1rem clamp(1rem, 4vw, 3rem); background: linear-gradient(rgba(43, 25, 18, 0.55), transparent); backdrop-filter: blur(2px); }
 .fr-nav-logo { height: 44px; width: auto; filter: drop-shadow(0 0 8px rgba(255, 180, 90, 0.35)); }
 .fr-nav nav { display: flex; align-items: center; gap: clamp(0.8rem, 2.4vw, 2rem); }
-.fr-nav button, .fr-nav a { background: none; border: 0; color: #fbeedd; font: 400 0.78rem var(--sans); letter-spacing: 0.24em; text-transform: uppercase; cursor: pointer; text-decoration: none; }
+.fr-nav button, .fr-nav a { background: none; border: 0; color: #fbeedd; font: 500 0.74rem var(--sans); letter-spacing: 0.26em; text-transform: uppercase; cursor: pointer; text-decoration: none; }
 .fr-nav { transition: background 0.4s ease, box-shadow 0.4s ease; }
 .fr-nav.is-solid { background: rgba(250, 243, 234, 0.92); backdrop-filter: blur(12px); box-shadow: 0 1px 0 rgba(214, 167, 94, 0.35); }
 .fr-nav.is-solid button, .fr-nav.is-solid a { color: var(--cocoa); }
@@ -69,20 +71,20 @@
 .fr-hero-logo img { width: 100%; display: block; filter: drop-shadow(0 0 8px rgba(255, 190, 100, 0.55)) drop-shadow(0 0 34px rgba(255, 150, 50, 0.35)); animation: frGlow 6s ease-in-out infinite; }
 @keyframes frGlow { 0%, 100% { filter: drop-shadow(0 0 8px rgba(255, 190, 100, 0.55)) drop-shadow(0 0 34px rgba(255, 150, 50, 0.35)); } 50% { filter: drop-shadow(0 0 12px rgba(255, 190, 100, 0.7)) drop-shadow(0 0 50px rgba(255, 150, 50, 0.45)); } }
 
-.fr-pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1.15rem; border-radius: 999px; border: 1px solid rgba(246, 215, 156, 0.4); background: rgba(246, 215, 156, 0.1); backdrop-filter: blur(8px); font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-hi); }
+.fr-pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1.15rem; border-radius: 999px; border: 1px solid rgba(246, 215, 156, 0.4); background: rgba(246, 215, 156, 0.1); backdrop-filter: blur(8px); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-hi); }
 .fr-pill--dark { color: var(--cocoa); border-color: rgba(43, 25, 18, 0.25); background: rgba(255, 255, 255, 0.5); }
 .fr-dot { width: 8px; height: 8px; border-radius: 50%; background: #ffb347; animation: frPulse 1.8s ease-out infinite; }
 @keyframes frPulse { 0% { box-shadow: 0 0 0 0 rgba(255, 179, 71, 0.7); } 100% { box-shadow: 0 0 0 12px rgba(255, 179, 71, 0); } }
 
-.fr-btn { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 0.6rem; padding: 1rem 2rem; border-radius: 999px; background: linear-gradient(135deg, #f1c47e, #c98a3c); color: var(--cocoa); font: 500 0.8rem var(--sans); letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none; box-shadow: 0 14px 40px rgba(214, 167, 94, 0.35); transition: transform 0.35s ease, box-shadow 0.35s ease; }
-.fr-btn::after { content: ''; position: absolute; top: 0; bottom: 0; width: 40%; left: -60%; background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.6), transparent); transform: skewX(-20deg); animation: frSheen 4.5s ease-in-out 2s infinite; }
-.fr-btn:hover { transform: translateY(-2px); box-shadow: 0 20px 50px rgba(214, 167, 94, 0.5); }
+.fr-btn { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 0.6rem; padding: 1rem 2rem; border-radius: 999px; background: rgba(43, 25, 18, 0.35); backdrop-filter: blur(10px); border: 1px solid rgba(246, 215, 156, 0.75); color: var(--gold-hi); font: 500 0.76rem var(--sans); letter-spacing: 0.3em; text-transform: uppercase; text-decoration: none; box-shadow: 0 0 30px rgba(214, 167, 94, 0.18), inset 0 0 20px rgba(246, 215, 156, 0.08); transition: transform 0.35s ease, box-shadow 0.35s ease; }
+.fr-btn::after { content: ''; position: absolute; top: 0; bottom: 0; width: 40%; left: -60%; background: linear-gradient(100deg, transparent, rgba(255, 236, 200, 0.28), transparent); transform: skewX(-20deg); animation: frSheen 4.5s ease-in-out 2s infinite; }
+.fr-btn:hover { transform: translateY(-2px); background: rgba(246, 215, 156, 0.16); box-shadow: 0 0 44px rgba(214, 167, 94, 0.35); }
 @keyframes frSheen { 0%, 70% { left: -60%; } 100% { left: 130%; } }
-.fr-btn--cocoa { background: var(--cocoa); color: var(--gold-hi); box-shadow: 0 14px 40px rgba(43, 25, 18, 0.3); }
+.fr-btn--cocoa { background: var(--cocoa); color: var(--gold-hi); border-color: var(--cocoa); box-shadow: 0 14px 40px rgba(43, 25, 18, 0.25); }
 .fr-btn--ghost { background: transparent; color: var(--cocoa); border: 1px solid rgba(43, 25, 18, 0.35); box-shadow: none; }
 .fr-btn--ghost::after { display: none; }
 
-.fr-scroll { position: absolute; bottom: 1.6rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.4rem; background: none; border: 0; color: rgba(251, 238, 221, 0.75); font: 400 0.68rem var(--sans); letter-spacing: 0.35em; text-transform: uppercase; cursor: pointer; animation: frBob 2.4s ease-in-out infinite; }
+.fr-scroll { position: absolute; bottom: 1.6rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.4rem; background: none; border: 0; color: rgba(251, 238, 221, 0.75); font: italic 400 0.85rem var(--sans); letter-spacing: 0.08em; text-transform: none; text-transform: uppercase; cursor: pointer; animation: frBob 2.4s ease-in-out infinite; }
 @keyframes frBob { 50% { transform: translate(-50%, 6px); } }
 
 /* falling blossom petals, from the pink trees in the store */
@@ -93,7 +95,7 @@
 /* ---------- 2 · ribbon ---------- */
 .fr-ribbon { background: var(--cocoa); color: var(--gold-hi); overflow: hidden; padding: 1.1rem 0; border-top: 1px solid rgba(214, 167, 94, 0.35); border-bottom: 1px solid rgba(214, 167, 94, 0.35); }
 .fr-ribbon-track { display: flex; width: max-content; animation: frMarquee 38s linear infinite; }
-.fr-ribbon span { font: italic 400 1.7rem var(--serif); padding: 0 1.4rem; white-space: nowrap; display: inline-flex; align-items: center; gap: 2.8rem; }
+.fr-ribbon span { font: italic 400 1.5rem var(--serif); padding: 0 1.4rem; white-space: nowrap; display: inline-flex; align-items: center; gap: 2.8rem; }
 .fr-ribbon em { font-style: normal; font-size: 0.8rem; color: var(--gold); }
 @keyframes frMarquee { to { transform: translateX(-50%); } }
 
@@ -108,7 +110,7 @@
 .fr-arch-img { aspect-ratio: 3 / 4.3; border-radius: 999px 999px 10px 10px; overflow: hidden; border: 1px solid rgba(214, 167, 94, 0.6); box-shadow: 0 0 0 10px var(--cream), 0 0 0 11px rgba(214, 167, 94, 0.35), 0 30px 60px rgba(43, 25, 18, 0.18); }
 .fr-arch-img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 75%; transform: scale(1.12); transition: transform 1.2s ease; }
 .fr-arch:hover .fr-arch-img img { transform: scale(1.02); }
-.fr-arch figcaption { margin-top: 1.6rem; font: italic 400 1.6rem var(--serif); display: flex; gap: 0.9rem; align-items: baseline; }
+.fr-arch figcaption { margin-top: 1.6rem; font: italic 400 1.4rem var(--serif); display: flex; gap: 0.9rem; align-items: baseline; }
 .fr-arch figcaption span { font: 400 0.7rem var(--sans); letter-spacing: 0.3em; color: var(--gold); font-style: normal; }
 .fr-progress { position: absolute; bottom: 7vh; left: clamp(1.25rem, 6vw, 5rem); right: clamp(1.25rem, 6vw, 5rem); height: 1px; background: rgba(43, 25, 18, 0.15); }
 .fr-progress span { position: absolute; inset: 0; transform-origin: left; transform: scaleX(var(--p)); background: var(--gold); }
@@ -116,7 +118,7 @@
 /* ---------- 4 · quote over fluting ---------- */
 .fr-quote { background: var(--flute); padding: clamp(6rem, 16vw, 12rem) 1.25rem; text-align: center; position: relative; box-shadow: inset 0 18px 30px -18px rgba(43, 25, 18, 0.35), inset 0 -18px 30px -18px rgba(43, 25, 18, 0.35); }
 .fr-quote::after { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 10px; background: linear-gradient(#fff6e6, #ffd9a3); box-shadow: 0 0 30px 6px rgba(255, 200, 120, 0.7); } /* the LED cove line */
-.fr-quote p { font: italic 500 clamp(2.6rem, 8vw, 6.5rem) var(--serif); line-height: 1; }
+.fr-quote p { font: italic 400 clamp(2.6rem, 8vw, 6.5rem) var(--serif); line-height: 1.05; letter-spacing: -0.02em; }
 .fr-shimmer { background: linear-gradient(100deg, #6b3a24 20%, #c98a3c 40%, #ffe3ad 50%, #c98a3c 60%, #6b3a24 80%); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: frShimmer 5s ease-in-out infinite; }
 @keyframes frShimmer { 0% { background-position: 100% 0; } 100% { background-position: -150% 0; } }
 
