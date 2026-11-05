@@ -15,7 +15,7 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="newsletter-section section-padding">
+    <section id="newsletter" className="newsletter-section section-padding">
       <div className="container">
         <div className="newsletter-box hover-card">
           <div className="newsletter-content">

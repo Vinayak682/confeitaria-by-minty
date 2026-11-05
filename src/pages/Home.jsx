@@ -1,5 +1,6 @@
 import HeroSection from '../components/HeroSection';
 import BehindTheScenes from '../components/BehindTheScenes';
+import ComingSoonBhubaneswar from '../components/ComingSoonBhubaneswar';
 import AboutChef from '../components/AboutChef';
 import FlavorPalette from '../components/FlavorPalette';
 import HighlightsMenu from '../components/HighlightsMenu';
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <ComingSoonBhubaneswar />
       <BehindTheScenes />
       <AboutChef />
       <HighlightsMenu />
