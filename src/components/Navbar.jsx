@@ -6,12 +6,12 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="container nav-container">
-        <Link to="/" className="nav-brand">
+        <Link to="/minty" className="nav-brand">
           <span className="script-text">Confeitaria</span>
           <span className="brand-sub">by Minty</span>
         </Link>
         <div className="nav-links">
-          <NavLink to="/" className={({isActive}) => isActive ? "active" : ""}>Home</NavLink>
+          <NavLink to="/minty" className={({isActive}) => isActive ? "active" : ""}>Home</NavLink>
           <NavLink to="/services" className={({isActive}) => isActive ? "active" : ""}>Services</NavLink>
           <NavLink to="/portfolio" className={({isActive}) => isActive ? "active" : ""}>Portfolio</NavLink>
           <NavLink to="/recipes" className={({isActive}) => isActive ? "active" : ""}>Recipes</NavLink>

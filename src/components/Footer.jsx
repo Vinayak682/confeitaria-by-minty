@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="footer-links">
             <div className="link-group">
               <h4>Navigation</h4>
-              <Link to="/">Home</Link>
+              <Link to="/minty">Home</Link>
               <Link to="/services">Services & Booking</Link>
               <Link to="/portfolio">Portfolio</Link>
               <Link to="/recipes">Recipe Blog</Link>

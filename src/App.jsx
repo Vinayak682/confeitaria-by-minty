@@ -5,13 +5,15 @@ import RecipeList from './pages/RecipeList';
 import RecipeDetail from './pages/RecipeDetail';
 import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
+import FrasersLaunch from './pages/FrasersLaunch';
 
 function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+        <Route path="/" element={<FrasersLaunch />} />
+        <Route element={<Layout />}>
+          <Route path="minty" element={<Home />} />
           <Route path="services" element={<Services />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="recipes" element={<RecipeList />} />
