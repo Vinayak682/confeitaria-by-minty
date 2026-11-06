@@ -67,10 +67,10 @@
 /* ---------- 1 · hero ---------- */
 .fr-hero { position: relative; min-height: 100svh; display: grid; place-items: center; overflow: hidden; isolation: isolate; color: #fbeedd; --mx: 50%; --my: 45%; --sy: 0; }
 .fr-hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; transform: scale(calc(1.06 + var(--sy) * 0.08)); filter: saturate(1.1); }
-.fr-hero-veil { position: absolute; inset: 0; z-index: -2; background: radial-gradient(70% 60% at 50% 50%, rgba(43, 25, 18, 0.45), rgba(43, 25, 18, 0.82)), linear-gradient(180deg, rgba(43, 25, 18, 0.5), transparent 30%, transparent 70%, rgba(43, 25, 18, 0.9)); }
+.fr-hero-veil { position: absolute; inset: 0; z-index: -2; background: radial-gradient(72% 60% at 50% 50%, rgba(43, 25, 18, 0.06), rgba(43, 25, 18, 0.3)), linear-gradient(180deg, rgba(43, 25, 18, 0.22), transparent 34%, transparent 68%, rgba(43, 25, 18, 0.34)); }
 .fr-hero-light { position: absolute; inset: 0; z-index: -1; background: radial-gradient(420px circle at var(--mx) var(--my), rgba(255, 186, 110, 0.22), transparent 70%); mix-blend-mode: screen; transition: background 0.2s; }
 .fr-hero-inner { text-align: center; padding: 7rem 1.25rem 5rem; transform: translateY(calc(var(--sy) * -60px)); opacity: calc(1 - var(--sy) * 1.2); }
-.fr-hero-logo { margin: 2rem auto 2.4rem; width: min(86vw, 760px); }
+.fr-hero-logo { margin: 2rem auto 2.4rem; width: min(68vw, 580px); }
 .fr-hero-logo img { width: 100%; display: block; filter: drop-shadow(0 0 8px rgba(255, 190, 100, 0.55)) drop-shadow(0 0 34px rgba(255, 150, 50, 0.35)); animation: frGlow 6s ease-in-out infinite; }
 @keyframes frGlow { 0%, 100% { filter: drop-shadow(0 0 8px rgba(255, 190, 100, 0.55)) drop-shadow(0 0 34px rgba(255, 150, 50, 0.35)); } 50% { filter: drop-shadow(0 0 12px rgba(255, 190, 100, 0.7)) drop-shadow(0 0 50px rgba(255, 150, 50, 0.45)); } }
 
@@ -274,14 +274,39 @@
   .fr-crumbs, .fr-shower, .fr-flour { display: none; }
 }
 
-/* ================= RANGE cards now play real reels ================= */
-.fr-band-vid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; transition: transform 1.2s ease; }
-.fr-band:hover .fr-band-vid { transform: scale(1.05); }
-.fr-band::after { z-index: 1; background-image: none; opacity: 1; background: linear-gradient(180deg, transparent 45%, rgba(250, 243, 234, 0.25) 60%, rgba(250, 243, 234, 0.96) 88%); }
-.fr-band--sage::after { background: linear-gradient(180deg, transparent 45%, rgba(205, 216, 196, 0.35) 62%, rgba(205, 216, 196, 0.97) 88%); }
-.fr-band--blush::after { background: linear-gradient(180deg, transparent 45%, rgba(245, 214, 220, 0.35) 62%, rgba(245, 214, 220, 0.97) 88%); }
-.fr-band::before { z-index: 2; border-color: rgba(255, 236, 200, 0.85); }
-.fr-band-no, .fr-band h3 { z-index: 3; }
+/* ================= RANGE cards: photo to motion transition ================= */
+.fr-band { background: var(--ivory); }
+.fr-band-photo, .fr-band-vid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.fr-band-photo { z-index: 0; transform: scale(1.035); transition: opacity 0.8s ease, transform 1.2s ease; }
+.fr-band-vid { z-index: 1; opacity: 0; transition: opacity 0.8s ease, transform 1.2s ease; }
+.fr-band-vid.is-playing { opacity: 0; }
+.fr-band:has(.fr-band-vid.is-playing) .fr-band-photo { opacity: 1; transform: scale(1.04); }
+.fr-band:hover .fr-band-vid, .fr-band:focus-within .fr-band-vid { opacity: 0.9; transform: scale(1.05); }
+.fr-band:hover .fr-band-photo, .fr-band:focus-within .fr-band-photo { opacity: 0.12; transform: scale(1.08); }
+.fr-band::after { z-index: 2; opacity: 1; background: linear-gradient(180deg, transparent 38%, rgba(250, 243, 234, 0.75) 62%, rgba(250, 243, 234, 0.98) 76%); }
+.fr-band--sage::after { background: linear-gradient(180deg, transparent 38%, rgba(205, 216, 196, 0.75) 62%, rgba(205, 216, 196, 0.98) 76%); }
+.fr-band--blush::after { background: linear-gradient(180deg, transparent 38%, rgba(245, 214, 220, 0.75) 62%, rgba(245, 214, 220, 0.98) 76%); }
+.fr-band::before { z-index: 3; border-color: rgba(255, 236, 200, 0.85); }
+.fr-band-copy { position: relative; z-index: 4; text-align: center; }
+.fr-band-no, .fr-band h3 { z-index: auto; }
+.fr-band-copy p { max-width: 18ch; margin: 0.55rem auto 0; font: 400 0.72rem/1.45 var(--sans); letter-spacing: 0.04em; color: var(--cocoa); }
+
+/* ================= Compact sweet edit ================= */
+.fr-collection { max-width: 1100px; margin: clamp(3.5rem, 8vw, 6rem) auto 0; }
+.fr-collection-head { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 1.6rem; }
+.fr-collection-head h2 { font-size: clamp(2.8rem, 5vw, 4.5rem); margin-top: 0.3rem; }
+.fr-collection-head p { max-width: 28ch; margin: 0; color: var(--charcoal); font-size: 0.86rem; }
+.fr-collection-track { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0.7rem; }
+.fr-collection-card { position: relative; min-height: 220px; overflow: hidden; border-radius: 80px 80px 12px 12px; border: 1px solid rgba(214, 167, 94, 0.5); background: var(--ivory); box-shadow: 0 15px 28px rgba(43, 25, 18, 0.1); }
+.fr-collection-card img, .fr-collection-card video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.fr-collection-card img { transition: opacity 0.6s ease, transform 0.9s ease; }
+.fr-collection-card video { opacity: 0; transition: opacity 0.6s ease, transform 0.9s ease; }
+.fr-collection-card video.is-playing { opacity: 0; }
+.fr-collection-card:has(video.is-playing) img { opacity: 1; transform: none; }
+.fr-collection-card:hover video, .fr-collection-card:focus-within video { opacity: 0.9; transform: scale(1.05); }
+.fr-collection-card:hover img, .fr-collection-card:focus-within img { opacity: 0.1; transform: scale(1.08); }
+.fr-collection-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 46%, rgba(43, 25, 18, 0.72)); }
+.fr-collection-card span { position: absolute; z-index: 1; right: 0.8rem; bottom: 0.9rem; left: 0.8rem; color: #fff7eb; font: 500 clamp(1.15rem, 1.7vw, 1.6rem)/0.94 var(--script); text-shadow: 0 2px 10px rgba(43, 25, 18, 0.5); }
 
 /* ================= Fresh from the kitchen ================= */
 .fr-reels { padding: clamp(4rem, 10vw, 7rem) 0; background: var(--cream); position: relative; }
@@ -298,6 +323,11 @@
 @media (max-width: 820px) {
   .fr-reel { width: 62vw; }
   .fr-band { aspect-ratio: 4 / 3.4; }
+  .fr-collection-head { display: block; margin-bottom: 1.25rem; }
+  .fr-collection-head p { margin-top: 0.75rem; }
+  .fr-collection-track { display: flex; overflow-x: auto; padding: 0.2rem 1.25rem 1.1rem; margin: 0 -1.25rem; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .fr-collection-track::-webkit-scrollbar { display: none; }
+  .fr-collection-card { flex: 0 0 52vw; min-height: 250px; scroll-snap-align: center; }
 }
 
 /* final card: mobile formatting polish */

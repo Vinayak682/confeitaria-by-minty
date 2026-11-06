@@ -17,10 +17,19 @@ const ROOMS = [
   { src: 'still-13.5.jpg', word: 'Your seat' },
 ];
 const UM = '/confeitaria-by-minty/user-media';
+/* real Minty photos only (no generated images) */
 const RANGE = [
-  { name: 'Cakes', tone: 'sage', vid: 5 },
-  { name: 'Macarons', tone: 'blush', vid: 4 },
-  { name: 'Viennoiserie', tone: 'ivory', vid: 6 },
+  { name: 'Cakes', tone: 'sage', vid: 5, image: `${UM}/minty_photo_29.png`, label: 'Celebration cakes & delicate slices' },
+  { name: 'Macarons', tone: 'blush', vid: 4, image: `${UM}/minty_photo_38.png`, label: 'Little shells, bright fillings' },
+  { name: 'Viennoiserie', tone: 'ivory', vid: 6, image: `${UM}/minty_photo_35.png`, label: 'Buttery morning bakes' },
+];
+const COLLECTION = [
+  { name: 'Cheesecakes', image: `${UM}/minty_photo_2.png`, vid: 7 },
+  { name: 'Layer cakes', image: `${UM}/minty_photo_45.png`, vid: 2 },
+  { name: 'Cookies', image: `${UM}/minty_photo_16.png`, vid: 4 },
+  { name: 'Celebration cakes', image: `${UM}/minty_photo_42.png`, vid: 5 },
+  { name: 'Tarts', image: `${UM}/minty_photo_36.png` },
+  { name: 'Cupcakes', image: `${UM}/minty_photo_24.png` },
 ];
 const REELS = [
   { vid: 1, url: 'https://www.instagram.com/reel/CoB-c8aPJta/' },
@@ -40,7 +49,7 @@ function useLazyVideos() {
       const v = e.target;
       if (e.isIntersecting) {
         if (!v.src) v.src = v.dataset.lazy;
-        v.play().catch(() => {});
+        v.play().then(() => v.classList.add('is-playing')).catch(() => {});
       } else v.pause();
     }), { rootMargin: '200px 0px', threshold: 0.01 });
     vids.forEach((v) => io.observe(v));
@@ -196,7 +205,17 @@ export default function FrasersLaunch() {
 
       {/* 1 · Hero */}
       <section className="fr-hero" ref={heroRef}>
-        <video className="fr-hero-video" src={`${A}/store.mp4`} poster={`${A}/still-1.jpg`} autoPlay muted loop playsInline aria-hidden="true" />
+        <video
+          className="fr-hero-video"
+          src={`${A}/store.mp4`}
+          poster={`${A}/still-1.jpg`}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        />
         <div className="fr-hero-veil" aria-hidden="true" />
         <div className="fr-hero-light" aria-hidden="true" />
         <div className="fr-petals" aria-hidden="true">
@@ -262,13 +281,35 @@ export default function FrasersLaunch() {
         </div>
         <div className="fr-range-grid">
           {RANGE.map((r, i) => (
-            <div className={`fr-band fr-band--${r.tone}`} key={r.name} data-reveal style={{ '--d': `${i * 0.12}s` }}>
-              <video className="fr-band-vid" data-lazy={`${UM}/minty_full_vid_${r.vid}.mp4`} muted loop playsInline preload="none" aria-hidden="true" />
-              <span className="fr-band-no">0{i + 1}</span>
-              <h3>{r.name}</h3>
-            </div>
+            <article className={`fr-band fr-band--${r.tone}`} key={r.name} data-reveal style={{ '--d': `${i * 0.12}s` }}>
+              <img className="fr-band-photo" src={r.image} alt="" loading="lazy" />
+              <video className="fr-band-vid" data-lazy={`${UM}/minty_full_vid_${r.vid}.mp4`} muted loop playsInline preload="metadata" aria-hidden="true" />
+              <div className="fr-band-copy">
+                <span className="fr-band-no">0{i + 1}</span>
+                <h3>{r.name}</h3>
+                <p>{r.label}</p>
+              </div>
+            </article>
           ))}
         </div>
+        <section className="fr-collection" aria-labelledby="fr-collection-title">
+          <div className="fr-collection-head" data-reveal>
+            <div>
+              <span className="fr-kicker">A little more to discover</span>
+              <h2 id="fr-collection-title">The sweet edit</h2>
+            </div>
+            <p>A small taste of the counter, without making the page feel endless.</p>
+          </div>
+          <div className="fr-collection-track">
+            {COLLECTION.map((item, i) => (
+              <article className="fr-collection-card" key={item.name} data-reveal style={{ '--d': `${(i % 4) * 0.08}s` }}>
+                <img src={item.image} alt={item.name} loading="lazy" />
+                {item.vid && <video data-lazy={`${UM}/minty_full_vid_${item.vid}.mp4`} muted loop playsInline preload="none" aria-hidden="true" />}
+                <span>{item.name}</span>
+              </article>
+            ))}
+          </div>
+        </section>
         <figure className="fr-maison" data-reveal>
           <img src={`${A}/maison-box.jpg`} alt="The Maison Frasers gift box" loading="lazy" />
           <figcaption>Gifting, in the Maison box</figcaption>
